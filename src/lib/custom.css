@@ -6,13 +6,16 @@ body {
 	align-items: center;
 
 	width: 100%;
-	max-width: 500px;
-	margin: 32px auto 32px auto;
-	padding: 0px 32px 0px 32px;
+	max-width: 600px;
+	margin: 0px auto 0px auto;
 
 	font-family: "Quicksand", serif;
 	font-weight: 700;
 	font-style: normal;
+}
+
+.column {
+	margin: 32px 32px 32px 32px;
 }
 
 .header {
