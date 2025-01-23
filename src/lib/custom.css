@@ -1,0 +1,55 @@
+body {
+	/* background-color: #6400d5; */
+	background-color: #6740be;
+	color: white;
+	justify-content: center;
+	align-items: center;
+
+	width: 100%;
+	max-width: 500px;
+	margin: 32px auto 32px auto;
+	padding: 0px 32px 0px 32px;
+
+	font-family: "Quicksand", serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+.header {
+	display: flex;
+	width: 100%;
+	height: 100px;
+	flex-wrap: nowrap;
+	gap: 16px;
+	margin-top: 32px;
+
+	font-size: 32px;
+	align-items: center;
+	justify-content: center;
+}
+
+.header img {
+	object-fit: contain;
+	width: auto;
+	height: 100%;
+}
+
+/* unvisited link */
+a:link {
+	color: orange;
+}
+
+/* visited link */
+a:visited {
+	color: orange;
+}
+
+/* mouse over link */
+a:hover {
+	color: white;
+}
+
+/* selected link */
+a:active {
+	color: red;
+}
