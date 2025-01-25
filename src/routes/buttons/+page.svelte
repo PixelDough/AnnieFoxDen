@@ -33,7 +33,14 @@
 <div>
 	<h2>My buttons!</h2>
 	<p>Feel free to add my button to your page :3</p>
-	<img src={AnnieButton} alt="Annie's Button"  />
+	<div>
+	<div>
+		<img src={AnnieButton} alt="Annie's Button"  />
+	</div>
+	
+	<textarea readonly style:min-width="88px" style:max-width="200px" style:min-height="31px" style:max-height="100px" style:font-family="monospace">
+<a title="Annie's Fox Den" href="http://anniesden.dev"><img width="88px" height="31px" src="https://anniesden.dev/_app/immutable/assets/AnnieButton.C3RtSden.gif"/></a></textarea>
+</div>
 </div>
 
 <hr />
