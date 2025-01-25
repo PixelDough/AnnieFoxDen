@@ -1,19 +1,5 @@
 <script>
-	const { path, imagePath } = $props();
-	
-	function pathToUrl(path) {
-		return `https://${path.replace(/^.*[\\/]/, '').replace(/\.[^/.]+$/, '')}`;
-	}
-	
-	let isHovered = $state(false);
-	
-	function handleMouseOver() {
-		isHovered = true;
-	}
-	
-	function handleMouseOut() {
-		isHovered = false;
-	}
+	const { children } = $props();
 </script>
 
 <style>
@@ -31,7 +17,8 @@
 		
 		mask-image: linear-gradient(45deg,rgba(0,0,0,0) 40%,#000 50%,rgba(0,0,0,0) 60%);
 		mask-size: 800%;
-		mask-position: 30%;
+		mask-position: 25%;
+		pointer-events: none;
 	}
 	
 	.badge:hover::after {
@@ -42,8 +29,8 @@
 	}
 </style>
 
-<a href={pathToUrl(path)} aria-label={path}>
-	<div class="badge">
-		<img class="badge" src={imagePath} alt="Go to site:{pathToUrl(path)}" />
-	</div>
-</a>
+<span class="badge">
+	{#if children}
+		{@render children()}
+	{/if}
+</span>

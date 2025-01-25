@@ -12,7 +12,13 @@ h6 {
 	padding: 0;
 }
 
-hr {margin-left:0;margin-right:0}
+hr {
+	margin-left:0;
+	margin-right:0;
+	color: #af91f4;
+	border-color: #af91f4;
+}
+
 
 body {
 	display: flex;
