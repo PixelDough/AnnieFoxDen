@@ -80,8 +80,9 @@
 	
 	<div class="buttonList">
 		{#each Object.entries(friendsButtons) as [_path, module]}
-			<ImageButton path={_path} imagePath={module.default} />
+			<ImageButton path={_path} imagePath={_path} />
 		{/each}
+		<UrlButton html='<a title="bellets :-DD" href="https://bellets.me"><img width="88px" height="31px" src="https://bellets.me/assets/bellets.gif"/></a>' />
 	</div>
 </div>
 
@@ -91,7 +92,7 @@
 	
 	<div class="buttonList">
 		{#each Object.entries(coolSitesButtons) as [_path, module]}
-			<ImageButton path={_path} imagePath={module.default} />
+			<ImageButton path={_path} imagePath={_path} />
 		{/each}
 		<UrlButton html='<a title="Nitrome - Play Free Games" href="http://www.nitrome.com"><img width="88px" height="31px" src="https://nitrome.com/images/links/nitrome-link.png"/></a>' />
 		<UrlButton html='<a href="https://angelinmyhead.nekoweb.org/"><img src="https://dl.dropbox.com/scl/fi/oywze0923d21xbdgh2hve/barcodeaimh.gif?rlkey=vp91ch8orfjcc45e92rtpy2if&st=ohoawsnr&raw=1"></a>' />
@@ -106,7 +107,7 @@
 	
 	<div class="buttonList">
 		{#each Object.entries(funButtons) as [_path, module]}
-			<ImageButton imagePath={module.default} />
+			<ImageButton imagePath={_path} />
 		{/each}
 	</div>
 </div>

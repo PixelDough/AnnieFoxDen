@@ -3,6 +3,13 @@
 </script>
 
 <style>
+	.badge::before {
+		
+	}
+	.badge {
+		width: 88px;
+		height: 31px;
+	}
 	.badge::after {
 		content: "";
 		position: absolute;
