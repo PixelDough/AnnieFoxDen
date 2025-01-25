@@ -24,7 +24,7 @@
 	
 	.badge::after {
 		content: "";
-		position: fixed;
+		position: absolute;
 		transform: translate(-88px, -0px);
 		width: 88px;
 		height: 31px;
