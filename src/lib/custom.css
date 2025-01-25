@@ -23,12 +23,15 @@ body {
 	width: 100%;
 	flex-wrap: nowrap;
 	flex-direction: column;
-	gap: 8px;
+	gap: 0px;
 	margin-top: 32px;
 
-	font-size: 32px;
 	align-items: center;
 	justify-content: center;
+}
+
+.header h1 {
+	line-height: 0.0em;
 }
 
 .header img {

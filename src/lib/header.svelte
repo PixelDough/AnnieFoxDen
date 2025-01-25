@@ -7,12 +7,12 @@
 
 <div class="header">
 	<img src={AnnieTransparentMedium} alt="Annie's Fox Den Icon"  />
-	{pageName}
+	<h1>{pageName}</h1>
 </div>
-<!-- <marquee>Coming soon...</marquee> -->
 
+<hr />
 
-<Marquee pauseOnHover={true} speed={50} play={true} gap="8px" style="mask-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 0) 100%)">
+<Marquee pauseOnHover={true} speed={50} play={true} gap="8px" style="line-height: 0.0em; mask-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 0) 100%)">
 	<p> / </p>
 	<p> / </p>
 	<p> / </p>
@@ -22,4 +22,4 @@
 	<p> (>^3^)> </p>
 </Marquee>
 
-<!-- <hr /> -->
+<hr />
