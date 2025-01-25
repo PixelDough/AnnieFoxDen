@@ -2,6 +2,7 @@
 	import { title } from "$lib/store.js";
 	title.set("Buttons!")
 	
+	import Button from '$lib/button.svelte';
 	import AnnieButton from '$lib/assets/AnnieButton.gif';
 	
 	const friendsButtons = import.meta.glob(
@@ -42,7 +43,7 @@
 	
 	<div style:display="flex" style:gap="8px" style:flex-wrap="wrap">
 		{#each Object.entries(friendsButtons) as [_path, module]}
-			<a href={pathToUrl(_path)} aria-label={_path}><img src={module.default} alt="Go to site:{pathToUrl(_path)}" /></a>
+			<Button path={_path} />
 		{/each}
 	</div>
 </div>
@@ -55,7 +56,7 @@
 	
 	<div style:display="flex" style:gap="8px" style:flex-wrap="wrap">
 		{#each Object.entries(coolSitesButtons) as [_path, module]}
-			<a href={pathToUrl(_path)} aria-label={_path}><img src={module.default} alt="Go to site:{pathToUrl(_path)}" /></a>
+			<Button path={_path} />
 		{/each}
 	</div>
 </div>
