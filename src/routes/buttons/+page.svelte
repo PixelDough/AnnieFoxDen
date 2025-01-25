@@ -6,7 +6,7 @@
 	import AnnieButton from '$lib/assets/AnnieButton.gif';
 	
 	const friendsButtons = import.meta.glob(
-		'$lib/assets/buttons/friends/*.{gif,jpg,png}',
+		'$lib/assets/buttons/friends/*.gif',
 		{
 			eager: true,
 			query: {
@@ -15,7 +15,7 @@
 		}
 	)
 	const coolSitesButtons = import.meta.glob(
-		'$lib/assets/buttons/cool/*.{gif,jpg,png}',
+		'$lib/assets/buttons/cool/*.gif',
 		{
 			eager: true,
 			query: {
@@ -43,7 +43,7 @@
 	
 	<div style:display="flex" style:gap="8px" style:flex-wrap="wrap">
 		{#each Object.entries(friendsButtons) as [_path, module]}
-			<Button path={_path} />
+			<Button path={_path} imagePath={module.default} />
 		{/each}
 	</div>
 </div>
@@ -56,7 +56,7 @@
 	
 	<div style:display="flex" style:gap="8px" style:flex-wrap="wrap">
 		{#each Object.entries(coolSitesButtons) as [_path, module]}
-			<Button path={_path} />
+			<Button path={_path} imagePath={module.default} />
 		{/each}
 	</div>
 </div>

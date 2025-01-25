@@ -1,7 +1,7 @@
 <script>
-	const { path } = $props();
+	const { path, imagePath } = $props();
 	
-	const pathToUrl = (path) => {
+	function pathToUrl(path) {
 		return `https://${path.replace(/^.*[\\/]/, '').replace(/\.[^/.]+$/, '')}`;
 	}
 	
@@ -30,7 +30,7 @@
 		height: 31px;
 		background-color: white;
 		
-		-webkit-mask-image: linear-gradient(45deg,rgba(0,0,0,0) 40%,#000 50%,rgba(0,0,0,0) 60%); */
+		-webkit-mask-image: linear-gradient(45deg,rgba(0,0,0,0) 40%,#000 50%,rgba(0,0,0,0) 60%);
 		-webkit-mask-size: 800%;
 		-webkit-mask-position: 0;
 		
@@ -47,12 +47,8 @@
 	}
 </style>
 
-<a href={pathToUrl(path)} aria-label={path} on:mouseover="{handleMouseOver}" on:mouseout="{handleMouseOut}">
+<a href={pathToUrl(path)} aria-label={path}>
 	<div class="badge">
-		<img class="badge" src={path} alt="Go to site:{pathToUrl(path)}" />
-		
-		<!-- {#if isHovered}
-			<img src={BadgeShine} />
-		{/if} -->
+		<img class="badge" src={imagePath} alt="Go to site:{pathToUrl(path)}" />
 	</div>
 </a>
