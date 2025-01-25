@@ -1,6 +1,6 @@
 <script>
 	import { title } from "$lib/store.js";
-	title.set("My Friends")
+	title.set("Buttons!")
 	
 	import AnnieButton from '$lib/assets/AnnieButton.gif';
 	
@@ -37,7 +37,7 @@
 <hr />
 
 <div>
-	<h2>My friends' buttons</h2>
+	<h2>My friends' buttons!</h2>
 	<p>Click on these buttons to go to their page!</p>
 	
 	<div style:display="flex" style:gap="8px" style:flex-wrap="wrap">
@@ -50,7 +50,7 @@
 <hr />
 
 <div>
-	<h2>Cool sites' buttons</h2>
+	<h2>Cool sites' buttons!</h2>
 	<p>Click on these buttons to go to their page!</p>
 	
 	<div style:display="flex" style:gap="8px" style:flex-wrap="wrap">
