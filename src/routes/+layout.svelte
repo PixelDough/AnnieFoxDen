@@ -24,6 +24,15 @@
 </svelte:head>
 
 <div class="column">
+	
 	<Header pageName={$title} />
-	{@render children()}
+		
+	<main>
+		{@render children()}
+	</main>
+	
+	<footer>
+		<hr \>
+		<p>Page built using Svelte</p>
+	</footer>
 </div>

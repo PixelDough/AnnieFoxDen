@@ -12,6 +12,3 @@
 	<li><a href="https://umeyu.me">UmeYume</a></li>
 	<li><a href="https://parallas.dev">parallas</a></li>
 </ul>
-
-<hr \>
-<p>Page built using Svelte</p>
