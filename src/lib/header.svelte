@@ -1,5 +1,6 @@
 <script lang="ts">
 	let { pageName } = $props();
+	import { fade } from 'svelte/transition';
 	import '$lib/custom.css';
 	import AnnieTransparentMedium from '$lib/assets/AnnieTransparentMedium.png';
 	import Marquee from 'svelte-fast-marquee';
@@ -7,7 +8,14 @@
 
 <div class="header">
 	<img src={AnnieTransparentMedium} alt="Annie's Fox Den Icon"  />
+	
 	<h1>{pageName}</h1>
+	
+	<div class="menubar">
+		<a href="/">Home</a>
+		<a href="/about">About</a>
+		<a href="/todo">Todo</a>
+	</div>
 </div>
 
 <hr />
