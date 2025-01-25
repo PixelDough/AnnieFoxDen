@@ -12,3 +12,6 @@
 	<li><a href="https://umeyu.me">UmeYume</a></li>
 	<li><a href="https://parallas.dev">parallas</a></li>
 </ul>
+
+<p>Using Nekoweb? Follow me with the button below!</p>
+<iframe src="https://nekoweb.org/frame/follow" title="Follow me on Nekoweb!" frameborder="0" width="170" height="28"></iframe>

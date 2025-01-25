@@ -3,6 +3,7 @@
 	title.set("Buttons!")
 	
 	import Button from '$lib/button.svelte';
+	import UrlButton from '$lib/urlButton.svelte';
 	import AnnieButton from '$lib/assets/AnnieButton.gif';
 	
 	const friendsButtons = import.meta.glob(
@@ -58,6 +59,7 @@
 		{#each Object.entries(coolSitesButtons) as [_path, module]}
 			<Button path={_path} imagePath={module.default} />
 		{/each}
+		<UrlButton html='<a title="Nitrome - Play Free Games" href="http://www.nitrome.com"><img width="88px" height="31px" src="https://nitrome.com/images/links/nitrome-link.png"/></a>' />
 	</div>
 </div>
 
