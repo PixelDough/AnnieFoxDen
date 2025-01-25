@@ -53,6 +53,7 @@
 		{#each Object.entries(friendsButtons) as [_path, module]}
 			<Button path={_path} imagePath={module.default} />
 		{/each}
+		<UrlButton html='<a href="https://bscit.dev/"><img src="https://bscit.dev/images/bscitdev-widget.gif"></a>' />
 	</div>
 </div>
 

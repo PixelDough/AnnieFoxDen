@@ -17,11 +17,6 @@
 </script>
 
 <style>
-	img {
-		width: 88px;
-		height: 31px;
-	}
-	
 	.badge::after {
 		content: "";
 		position: absolute;
