@@ -10,7 +10,7 @@ body {
 	margin: 0px auto 0px auto;
 	
 	font-display: swap;
-	font-family: ui-rounded;
+	font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	letter-spacing: 0.1em;
 	font-weight: 600;
 	font-style: normal;
