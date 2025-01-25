@@ -1,5 +1,6 @@
 <script>
 	const { children, stringToCopy } = $props();
+	import { fade } from 'svelte/transition'
 	
 	var didCopy = $state(false);
 	function copyToClipboard() {
@@ -13,17 +14,22 @@
 </script>
 
 <style>
-	span:after {
-		content: "copied";
-		background: #00000077;
-		position: absolute;
-		transform: translate(-0, -34px);
+	.container {
+		position: relative;
 		width: 88px;
 		height: 31px;
+	}
+	.overlay {
+		content: "copied!";
+		background: #00000077;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		display: flex;
 		justify-content: center;
-		text-align: center;
-		transition: opacity 0.2s;
-		opacity: var(--opacity);
+		align-items: center;
 		pointer-events: none;
 	}
 </style>
@@ -31,7 +37,13 @@
 <span 
 	onclick={didCopy ? null : copyToClipboard} 
 	style:cursor="pointer"
-	style:--opacity={didCopy ? 1 : 0}
 >
-	{@render children()}
+	<div class="container">
+		{@render children()}
+		{#if didCopy}
+			<div transition:fade={{ duration: 100 }} class="overlay">
+				<p>copied</p>
+			</div>
+		{/if}
+	</div>
 </span>
