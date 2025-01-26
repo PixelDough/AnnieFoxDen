@@ -9,32 +9,32 @@
 	import AnnieButton from '$lib/assets/AnnieButton.gif';
 	
 	const friendsButtons = import.meta.glob(
-		'$lib/assets/buttons/friends/*.gif',
+		'$lib/assets/buttons/friends/*.{gif,png,jpg,jpeg,PNG,JPEG}',
 		{
 			eager: true,
 			query: {
 				enhanced: true
 			}
 		}
-	)
+	);
 	const coolSitesButtons = import.meta.glob(
-		'$lib/assets/buttons/cool/*.gif',
+		'$lib/assets/buttons/cool/*.{gif,png,jpg,jpeg,PNG,JPEG}',
 		{
 			eager: true,
 			query: {
 				enhanced: true
 			}
 		}
-	)
+	);
 	const funButtons = import.meta.glob(
-		'$lib/assets/buttons/fun/*.{gif,png,jpg}',
+		'$lib/assets/buttons/fun/*.{gif,png,jpg,jpeg,PNG,JPEG}',
 		{
 			eager: true,
 			query: {
 				enhanced: true
 			}
 		}
-	)
+	);
 	
 	const anniesButtonHtml = `<a title="Annie's Fox Den" href="http://anniesden.dev"><img width="88px" height="31px" src="https://anniesden.dev/_app/immutable/assets/AnnieButton.C3RtSden.gif"/></a>`;
 </script>
@@ -80,9 +80,10 @@
 	
 	<div class="buttonList">
 		{#each Object.entries(friendsButtons) as [_path, module]}
-			<ImageButton path={_path} imagePath={_path} />
+			<ImageButton path={_path} imagePath={module.default} />
 		{/each}
 		<UrlButton html='<a title="bellets :-DD" href="https://bellets.me"><img width="88px" height="31px" src="https://bellets.me/assets/bellets.gif"/></a>' />
+		<UrlButton html='<a href="https://racc.at/"><img src="https://racc.at/media/uploads/88x31.png" alt="racc.at 88x31"/></a>' />
 	</div>
 </div>
 
@@ -92,9 +93,10 @@
 	
 	<div class="buttonList">
 		{#each Object.entries(coolSitesButtons) as [_path, module]}
-			<ImageButton path={_path} imagePath={_path} />
+			<ImageButton path={_path} imagePath={module.default} />
 		{/each}
 		<UrlButton html='<a title="Nitrome - Play Free Games" href="http://www.nitrome.com"><img width="88px" height="31px" src="https://nitrome.com/images/links/nitrome-link.png"/></a>' />
+		<UrlButton html='<a title="rubybulbs" href="https://rubybulbs.nekoweb.org"><img width="88px" height="31px" src="https://rubybulbs.nekoweb.org/img/newbutt.png"/></a>' />
 		<UrlButton html='<a href="https://angelinmyhead.nekoweb.org/"><img src="https://dl.dropbox.com/scl/fi/oywze0923d21xbdgh2hve/barcodeaimh.gif?rlkey=vp91ch8orfjcc45e92rtpy2if&st=ohoawsnr&raw=1"></a>' />
 		<UrlButton html='<a href="https://heckscaper.com/"><img src="https://heckscaper.com/data/buttons/msx8831.gif"></a>' />
 		<UrlButton html='<a href="http://mileshouse.neocities.org" data-alt=""><img src="http://mileshouse.neocities.org/img/kiophen8831.gif"></a>' />
@@ -107,7 +109,7 @@
 	
 	<div class="buttonList">
 		{#each Object.entries(funButtons) as [_path, module]}
-			<ImageButton imagePath={_path} />
+			<ImageButton imagePath={module.default} />
 		{/each}
 	</div>
 </div>

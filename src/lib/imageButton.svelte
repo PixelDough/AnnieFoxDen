@@ -11,11 +11,11 @@
 {#if path}
 	<a href={pathToUrl(path)} aria-label={path}>
 		<Button>
-			<img src={imagePath} />
+			<enhanced:img src={imagePath} />
 		</Button>
 	</a>
 {:else}
 	<Button>
-		<img src={imagePath} />
+		<enhanced:img src={imagePath} />
 	</Button>
 {/if}
