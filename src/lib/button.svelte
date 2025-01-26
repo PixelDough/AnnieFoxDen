@@ -26,7 +26,7 @@
 		
 		if (element.children[0]) {
 			element.children[0].style.transform = transform;
-			element.children[0].style.filter = `brightness(${brightness})`;
+			element.children[0].style.filter = `brightness(${brightness}) drop-shadow(${-xoff * 4}px ${-yoff * 4}px 0px black)`;
 		}
 	}
 </script>
@@ -80,7 +80,7 @@
 	}
 	
 	.badgeContent {
-		transition: transform 0.05s ease-out;
+		transition-duration: 0.05s;
 		will-change: transform;
 		image-rendering: pixelated;
 		position: static;
