@@ -80,7 +80,7 @@
 	}
 	
 	.badgeContent {
-		transition: transform 0.1s ease-out;
+		transition: transform 0.05s ease-out;
 		will-change: transform;
 		image-rendering: pixelated;
 		position: static;
