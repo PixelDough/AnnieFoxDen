@@ -75,6 +75,7 @@
 		{/each}
 		<UrlButton html='<a title="bellets :-DD" href="https://bellets.me"><img width="88px" height="31px" src="https://bellets.me/assets/bellets.gif"/></a>' />
 		<UrlButton html='<a href="https://racc.at/"><img src="https://racc.at/media/uploads/88x31.png" alt="racc.at 88x31"/></a>' />
+		<UrlButton html='<a href="https://compactbunker.org"><img src="https://compactbunker.org/blinkies/personal.gif"></a>' />
 	</div>
 </div>
 
@@ -92,6 +93,7 @@
 		<UrlButton html='<a href="https://heckscaper.com/"><img src="https://heckscaper.com/data/buttons/msx8831.gif"></a>' />
 		<UrlButton html='<a href="http://mileshouse.neocities.org" data-alt=""><img src="http://mileshouse.neocities.org/img/kiophen8831.gif"></a>' />
 		<UrlButton html='<a href="https://dimden.dev/"><img src="https://dimden.dev/services/images/88x31.gif"></a>' />
+		<UrlButton html='<a href="https://bang1338.nekoweb.org"><img src="https://bang1338.nekoweb.org/bang1338.gif" style="width: 88px;"></a>' />
 		
 	</div>
 </div>

@@ -26,7 +26,7 @@
 		
 		if (element.children[0]) {
 			element.children[0].style.transform = transform;
-			element.children[0].style.filter = `brightness(${brightness}) drop-shadow(${-xoff * 4}px ${-yoff * 4}px 0px black)`;
+			element.children[0].style.filter = `brightness(${brightness}) drop-shadow(${-xoff * 4.0}px ${-yoff * 4.0}px 0px black)`;
 		}
 	}
 </script>
