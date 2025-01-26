@@ -34,8 +34,13 @@
 	<footer>
 		<hr \>
 		<div style="display: flex; flex-direction: row; justify-content: space-between;">
-			<h6>Page built using Svelte</h6>
-			<h6><a href="/changelog">changelog</a></h6>
+			<div>
+				<h6>Page built using Svelte</h6>
+			</div>
+			<div style:display="flex" style:flex-direction="row" style:gap="8px" style:flex-wrap="wrap">
+				<h6><a href="/contact">contact</a></h6>
+				<h6><a href="/changelog">changelog</a></h6>
+			</div>
 		</div>
 	</footer>
 </div>
