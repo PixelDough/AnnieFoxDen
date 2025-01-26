@@ -12,6 +12,7 @@
 	<li>Added a bunch of fun decorative buttons</li>
 	<li>Added more friend site and cool site buttons</li>
 	<li>Made my button copy the html to the clipboard</li>
+	<li>Updated About page with tools lists</li>
 </ul>
 
 <h3>25-01-24</h3>
