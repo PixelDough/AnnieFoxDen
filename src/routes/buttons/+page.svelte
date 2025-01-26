@@ -12,27 +12,18 @@
 		'$lib/assets/buttons/friends/*.{gif,png,jpg,jpeg,PNG,JPEG}',
 		{
 			eager: true,
-			query: {
-				enhanced: true
-			}
 		}
 	);
 	const coolSitesButtons = import.meta.glob(
 		'$lib/assets/buttons/cool/*.{gif,png,jpg,jpeg,PNG,JPEG}',
 		{
 			eager: true,
-			query: {
-				enhanced: true
-			}
 		}
 	);
 	const funButtons = import.meta.glob(
 		'$lib/assets/buttons/fun/*.{gif,png,jpg,jpeg,PNG,JPEG}',
 		{
 			eager: true,
-			query: {
-				enhanced: true
-			}
 		}
 	);
 	
@@ -112,4 +103,8 @@
 			<ImageButton imagePath={module.default} />
 		{/each}
 	</div>
+</div>
+
+<div style:margin-top="32px" style:text-align="center">
+	<h6><a href="https://gist.github.com/KettLovahr/a459e8e9824880f9e038cd424d9c80c1">Button styles</a> made with the help of <a href="https://racc.at/">Kett</a>!</h6>
 </div>

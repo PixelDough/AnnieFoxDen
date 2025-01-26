@@ -1,6 +1,6 @@
 <script>
 	const { children, stringToCopy } = $props();
-	import { fade } from 'svelte/transition'
+	import { fly } from 'svelte/transition'
 	
 	var didCopy = $state(false);
 	function copyToClipboard() {
@@ -20,17 +20,16 @@
 		height: 31px;
 	}
 	.overlay {
-		content: "copied!";
-		background: #00000077;
+		background: #00000000;
 		position: absolute;
-		top: 0;
-		left: 0;
 		width: 100%;
 		height: 100%;
+		transform: translateY(-5px);
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		pointer-events: none;
+		z-index: 2000;
 	}
 </style>
 
@@ -41,8 +40,8 @@
 	<div class="container">
 		{@render children()}
 		{#if didCopy}
-			<div transition:fade={{ duration: 100 }} class="overlay">
-				<p>copied</p>
+			<div transition:fly={{ duration: 300, y: -8 }} class="overlay">
+				<h6>copied</h6>
 			</div>
 		{/if}
 	</div>
