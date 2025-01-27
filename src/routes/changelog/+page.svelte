@@ -5,6 +5,13 @@
 
 <h6>Note: Format is yy-mm-dd</h6>
 
+<h3>25-01-26</h3>
+<ul>
+	<li>Added Portfolio page</li>
+	<li>Added "Codename - Sugar Plum Fairy" to the Games Portfolio</li>
+	<li>Fixed issue with buttons not shimmering on firefox based browsers</li>
+</ul>
+
 <h3>25-01-25</h3>
 <ul>
 	<li>Refactored buttons</li>
