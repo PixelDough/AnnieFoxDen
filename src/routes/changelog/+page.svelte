@@ -7,6 +7,7 @@
 
 <h3>25-01-26</h3>
 <ul>
+	<li>Added email to contact page</li>
 	<li>Added Portfolio page</li>
 	<li>Added "Codename - Sugar Plum Fairy" to the Games Portfolio</li>
 	<li>Fixed issue with buttons not shimmering on firefox based browsers</li>
