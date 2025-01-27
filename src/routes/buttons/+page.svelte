@@ -94,6 +94,7 @@
 		<UrlButton html='<a href="http://mileshouse.neocities.org" data-alt=""><img src="http://mileshouse.neocities.org/img/kiophen8831.gif"></a>' />
 		<UrlButton html='<a href="https://dimden.dev/"><img src="https://dimden.dev/services/images/88x31.gif"></a>' />
 		<UrlButton html='<a href="https://bang1338.nekoweb.org"><img src="https://bang1338.nekoweb.org/bang1338.gif" style="width: 88px;"></a>' />
+		<UrlButton html='<a href=https://maddoxxing.neocities.org/><img src="https://maddoxxing.nekoweb.org/graphics/button3.gif"></a>' />
 		
 	</div>
 </div>
