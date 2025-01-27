@@ -50,45 +50,44 @@
 	.badge img:hover {
 		filter: brightness(1.1);
 	}
-	.badgeContent::after {
-		content: "";
-		position: absolute;
-		transform: translate(-88px, -0px);
-		width: 88px;
-		height: 31px;
-		background-color: white;
-		
-		-webkit-mask-image: linear-gradient(45deg,rgba(0,0,0,0) 40%,#000 50%,rgba(0,0,0,0) 60%);
-		-webkit-mask-size: 800%;
-		-webkit-mask-position: 0;
-		
-		mask-image: linear-gradient(45deg,rgba(0,0,0,0) 40%,#000 50%,rgba(0,0,0,0) 60%);
-		mask-size: 800%;
-		mask-position: 25%;
-		pointer-events: none;
-	}
-	
-	.badgeContent:hover::after {
-		transition: mask-position 1s ease,-webkit-mask-position 1s ease;
-		-webkit-mask-position: 120%;
-		mask-position: 120%;
-		opacity: 1;
-	}
-	
-	.badge:hover {
-		z-index: 1000;
-	}
 	
 	.badgeContent {
 		transition-duration: 0.05s;
 		will-change: transform;
 		image-rendering: pixelated;
-		position: static;
+		position: relative;
 		transform-style: preserve-3d;
 	}
 	
 	.badgeContent:hover {
 		filter: brightness(1.1);
+	}
+	
+	.badgeContent::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		right: 0;
+		width: 88px;
+		height: 31px;
+		background-color: white;
+		
+		mask-image: linear-gradient(45deg,rgba(0,0,0,0) 40%,#000 50%,rgba(0,0,0,0) 60%);
+		mask-size: 800%;
+		mask-position: 25%;
+		pointer-events: none;
+		z-index: 2000;
+	}
+	
+	.badgeContent:hover::after {
+		transition: mask-position 1s ease;
+		mask-position: 120%;
+		opacity: 1;
+		z-index: 2000;
+	}
+	
+	.badge:hover {
+		z-index: 1000;
 	}
 </style>
 

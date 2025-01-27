@@ -14,7 +14,6 @@
 	<div class="menubar">
 		<a href="/">Home</a>
 		<a href="/about">About</a>
-		<a href="/todo">Todo</a>
 		<a href="/buttons">Buttons</a>
 	</div>
 </div>

@@ -39,6 +39,7 @@
 			</div>
 			<div style:display="flex" style:flex-direction="row" style:gap="8px" style:flex-wrap="wrap">
 				<h6><a href="/contact">contact</a></h6>
+				<h6><a href="/todo">todo</a></h6>
 				<h6><a href="/changelog">changelog</a></h6>
 			</div>
 		</div>
