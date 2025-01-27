@@ -19,8 +19,9 @@
 	}
 </style>
 
-<p>I'm on <a href="https://bsky.app/profile/anniesden.dev">Bluesky!</a></p>
+<p>Email: <a href="mailto:webmistress@anniesden.dev">webmistress@anniesden.dev</a></p>
 <p>Discord: pixeldough</p>
+<p>I'm on <a href="https://bsky.app/profile/anniesden.dev">Bluesky!</a></p>
 <p style:color="#FFFFFF55" style:user-select="none">More contact options on this page...</p>
 
 <div class="hidden">
