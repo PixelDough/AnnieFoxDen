@@ -5,6 +5,11 @@
 
 <h6>Note: Format is yy-mm-dd</h6>
 
+<h3>25-01-29</h3>
+<ul>
+	<li>Added portfolio pages for Bugbounce, Moonlit Sonata, Sub VR, and Night Knight</li>
+</ul>
+
 <h3>25-01-26</h3>
 <ul>
 	<li>Added email to contact page</li>
