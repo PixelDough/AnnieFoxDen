@@ -6,6 +6,7 @@
 	import Header from '$lib/header.svelte';
 	
 	import { title } from "$lib/store.js";
+	import Music from '$lib/assets/SpaceMusic_60bpm.mp3';
 </script>
 
 <svelte:head>
@@ -23,8 +24,8 @@
 	<title>{$title}</title>
 </svelte:head>
 
+<audio src={Music} autoplay volume={0.2} loop></audio>
 <div class="column">
-	
 	<Header pageName={$title} />
 		
 	<main>
@@ -32,10 +33,10 @@
 	</main>
 	
 	<footer>
-		<hr \>
+		<hr />
 		<div style="display: flex; flex-direction: row; justify-content: space-between;">
 			<div>
-				<h6>Page built using Svelte</h6>
+				<h6>Page built using SvelteKit</h6>
 			</div>
 			<div style:display="flex" style:flex-direction="row" style:gap="8px" style:flex-wrap="wrap">
 				<h6><a href="/contact">contact</a></h6>

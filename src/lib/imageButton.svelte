@@ -1,5 +1,5 @@
 <script>
-	const { path, imagePath } = $props();
+	const { path = "", imagePath = "" } = $props();
 	import Button from '$lib/button.svelte';
 	
 	function pathToUrl(path) {

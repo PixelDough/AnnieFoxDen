@@ -1,5 +1,5 @@
 <script>
-	const { html, onclick } = $props();
+	const { html, onclick = null } = $props();
 	import Button from '$lib/button.svelte';
 </script>
 
