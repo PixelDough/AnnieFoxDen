@@ -4,8 +4,9 @@
 	let { data } = $props();
 
 	// Change year, month, and day to the date of the last update
-	const lastUpdateDate = new Date(Date.UTC(2025, 2 - 1, 15, 6));
-	const lastUpdateString = lastUpdateDate.toLocaleDateString();
+	const lastUpdateDate = new Date(1739640513 * 1000);
+	const lastUpdateStringGMT = lastUpdateDate.toUTCString();
+	const lastUpdateString = lastUpdateDate.toLocaleString();
 
 	import PortfolioThumbnail from '$lib/portfolioThumbnail.svelte';
 	import HoverObject from '$lib/hoverObject.svelte';
@@ -16,7 +17,10 @@
 </p>
 
 <h5>
-	Last updated: {lastUpdateString}
+	Last updated: <br />
+	{lastUpdateStringGMT}
+	<br />
+	{lastUpdateString}
 </h5>
 
 <style>

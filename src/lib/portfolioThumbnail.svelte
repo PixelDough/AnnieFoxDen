@@ -2,7 +2,11 @@
 	const { slug } = $props();
 
     const path = `/src/lib/assets/portfolio/thumbnails/${slug}.png`;
-    const images = import.meta.glob(`$lib/assets/portfolio/thumbnails/*.png`, { eager: true, as: 'url' });
+    const images = import.meta.glob(`$lib/assets/portfolio/thumbnails/*.png`, { 
+        query: { enhanced: true }, 
+        import: "default", 
+        eager: true 
+    });
 </script>
 
 <style>
@@ -14,4 +18,4 @@
     }
 </style>
 
-<img src={images[path]} alt={slug} class="item" />
+<enhanced:img src={images[path]} alt={slug} class="item" />
