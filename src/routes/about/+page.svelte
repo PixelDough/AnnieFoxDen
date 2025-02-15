@@ -4,9 +4,13 @@
 </script>
 
 <h2>About Me</h2>
-<p>Hi, I'm Annalise! You can just call me Annie though! My pronouns are she/her. I'm a follower of Jesus Christ. I've been medically transitioning since late 2022. I'm a red fox (that's me in the page header!)
+<p>Hi! I'm Annalise, but you can just call me Annie though!</p>
+<p>I'm a trans, Christian, furry game dev and programmer, and I've been designing games since 2015!</p>
+<p>My most popular project was probably "<a href="https://pixeldough.itch.io/start-survey">Start Survey?</a>" (maybe you've played it?), but my most recent project... is a secret! (^_-)-☆</p>
 
-<h2>Tools</h2>
+<hr/>
+
+<h2>Heres some tools I'm experienced with!</h2>
 <h3>Game Dev</h3>
 <ul>
 	<li>MonoGame</li>

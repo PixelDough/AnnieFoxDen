@@ -1,7 +1,7 @@
 export const data = [
 	{
 		slug: "sugar-plum-fairy",
-		title: "Codename: Sugar Plum Fairy",
+		title: "Sugar Plum Fairy",
 		status: "On Hold",
 		date: "2024/12",
 		collaborators: ["Jenna Bresky", "Elias Hatzandonis"],
