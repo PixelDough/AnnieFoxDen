@@ -8,14 +8,14 @@
 	}
 </script>
 
-{#if path}
+{#if path && imagePath}
 	<a href={pathToUrl(path)} aria-label={path}>
 		<Button>
-			<img src={imagePath} />
+			<img src={imagePath} alt={imagePath} />
 		</Button>
 	</a>
-{:else}
+{:else if imagePath}
 	<Button>
-		<img src={imagePath} />
+		<img src={imagePath} alt={imagePath} />
 	</Button>
 {/if}

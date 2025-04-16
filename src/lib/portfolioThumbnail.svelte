@@ -18,4 +18,4 @@
     }
 </style>
 
-<enhanced:img src={images[path]} alt={slug} class="item" />
+<img src={images[path]} alt={slug} class="item" />

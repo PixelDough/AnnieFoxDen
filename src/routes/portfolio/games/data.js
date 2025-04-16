@@ -1,5 +1,17 @@
 export const data = [
 	{
+		slug: "deep-space-bellhop",
+		title: "Deep Space Bellhop",
+		status: "Released on Steam!",
+		date: "2025/03",
+		collaborators: ["bscit"],
+		content: "<p>\"A cute turn-based-action game where your job is to transport strange and unfamiliar characters between floors in the galaxy's largest space hotel.\"</p><p>I wanted to work with my friend bscit on a game, and I wanted to challenge myself to make and release a game in a relatively short amount of time. I was living out of a hotel at the time, and that experience is what inspired the game's core premise.</p><p>Over the course of developing it in Monogame, we got to put together our own engine tailor-made for this game. We made sure the game was fully translatable from the start, and that all dialog and character behaviors were all data driven. We also learned how to integrate Facepunch's Steamworks SDK, as well as FMOD, into our engine!</p",
+		tools: "C#, Monogame",
+		videoIds: ["1075915592"],
+		pictures: [],
+		url: "https://store.steampowered.com/app/3429210/Deep_Space_Bellhop/",
+	},
+	{
 		slug: "sugar-plum-fairy",
 		title: "Sugar Plum Fairy",
 		status: "On Hold",

@@ -9,6 +9,13 @@
 
 	const images = import.meta.glob(`$lib/assets/portfolio/**/*.png`, { eager: true, as: 'url' });
 	const picSources = Object.keys(images).filter((url) => url.startsWith(`/src/lib/assets/portfolio/${data.post.slug}/`)).map((key) => images[key]);
+
+	var collaboratorUrls = new Map();
+	data.post.collaborators.forEach((collab) => {
+		if (collab === "bscit") {
+			collaboratorUrls.set(collab, "https://bscit.dev/");
+		}
+	});
 </script>
 
 <style>
@@ -22,7 +29,12 @@
 <h1>{data.post.title}</h1>
 
 <h2>When: {data.post.date}</h2>
-<h2>Status: {data.post.status}</h2>
+
+{#if data.post.url}
+	<h2>Status: <a href={data.post.url}>{data.post.status}</a></h2>
+{:else}
+	<h2>Status: {data.post.status}</h2>
+{/if}
 
 {#if data.post.videoIds.length > 0}
 	<h2>Videos</h2>
@@ -64,7 +76,15 @@
 
 {#if data.post.collaborators.length > 0}
 	<h2>Collaborators</h2>
-	<p>{data.post.collaborators.join(", ")}</p>
+	<ul>
+		{#each data.post.collaborators as collab }
+			{#if collaboratorUrls.has(collab)}
+				<a href={collaboratorUrls.get(collab)}>{collab}</a>
+			{:else}
+				<li>{collab}</li>
+			{/if}
+		{/each}
+	</ul>
 {/if}
 
 <h2>About</h2>
