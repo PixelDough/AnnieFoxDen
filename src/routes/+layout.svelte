@@ -7,6 +7,9 @@
 	
 	import { title } from "$lib/store.js";
 	import Music from '$lib/assets/SpaceMusic_60bpm.mp3';
+
+	import { Canvas } from '@threlte/core'
+  	import Scene from '$lib/Scene.svelte'
 </script>
 
 <svelte:head>
@@ -25,6 +28,14 @@
 </svelte:head>
 
 <audio src={Music} autoplay volume={0.2} loop></audio>
+<div style="position: fixed; width: 100%; height: 100%; z-index: -1; left: 0; top: 0;">
+	<div style="width: 100%; height: 100%;">
+		<Canvas colorManagementEnabled={true} colorSpace={"srgb"}>
+			<Scene />
+		</Canvas>
+	</div>
+	<div style="position: fixed; width: 100%; height: 100%; z-index: 0; left: 0; top: 0; backdrop-filter: blur(20px);"></div>
+</div>
 <div class="column">
 	<Header pageName={$title} />
 		

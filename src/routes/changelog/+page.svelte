@@ -5,6 +5,14 @@
 
 <h6>Note: Format is yy-mm-dd</h6>
 
+<h3>25-04-15</h3>
+<ul>
+	<li>Updated About Me</li>
+	<li>Added game to portfolio: "Deep Space Bellhop"</li>
+	<li>Added threejs background with blur</li>
+	<li>Fixed gif buttons not playing</li>
+</ul>
+
 <h3>25-02-15</h3>
 <ul>
 	<li>Updated About Me</li>
