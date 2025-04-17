@@ -4,7 +4,7 @@
 	let { data } = $props();
 
 	// Change year, month, and day to the date of the last update
-	const lastUpdateDate = new Date(1739641550 * 1000);
+	const lastUpdateDate = new Date(1744777764 * 1000);
 	const lastUpdateStringGMT = lastUpdateDate.toUTCString();
 	const lastUpdateString = lastUpdateDate.toLocaleString();
 
