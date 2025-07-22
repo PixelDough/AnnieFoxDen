@@ -1,10 +1,10 @@
-// import adapter from '@sveltejs/adapter-static';
-import adapter from 'svelte-adapter-nekoweb';
+import adapter from '@sveltejs/adapter-static';
+// import adapter from 'svelte-adapter-nekoweb';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex'
 import { createHighlighter } from 'shiki';
 
-import { NEKOWEB_API_KEY, NEKOWEB_COOKIE } from '$env/static/private';
+// import { NEKOWEB_API_KEY, NEKOWEB_COOKIE } from '$env/static/private';
 
 const theme = 'github-dark';
 const highlighter = await createHighlighter({
@@ -22,8 +22,8 @@ const config = {
 
 	kit: {
 		adapter: adapter({
-			apiKey: NEKOWEB_API_KEY,
-			cookie: NEKOWEB_COOKIE,
+			// apiKey: NEKOWEB_API_KEY,
+			// cookie: NEKOWEB_COOKIE,
 			folder: 'serve folder (default is "build")',
 			// default options are shown. On some platforms
 			// these options are set automatically — see below
