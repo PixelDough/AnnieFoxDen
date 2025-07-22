@@ -12,10 +12,18 @@ published: true
 <script>
   import BlogImage from '$lib/blogImage.svelte';
   import BlogImages from '$lib/blogImages.svelte';
+  import BlogItemCollection from '$lib/blogItemCollection.svelte';
   import AnnieTransparentMedium from '$lib/assets/AnnieTransparentMedium.png'
   const images = [
-	  "https://media1.tenor.com/m/x8v1oNUOmg4AAAAd/rickroll-roll.gif",
-	  "https://media1.tenor.com/m/ryp18LniYBsAAAAd/cat-laugh.gif",
+    {
+      src: "https://media1.tenor.com/m/x8v1oNUOmg4AAAAd/rickroll-roll.gif",
+      alt: "rickroll",
+      link: "https://youtu.be/dQw4w9WgXcQ?si=oUdZB-ObhERXY8zl",
+    },
+    {
+      src: "https://media1.tenor.com/m/ryp18LniYBsAAAAd/cat-laugh.gif",
+      alt: "cat laughing",
+    }
   ]
 </script>
 
@@ -31,6 +39,8 @@ take a look at that image embed!
 
 anyways, that's all for this blog post. hopefully gonna share what i've been working on here soon!
 
-<BlogImage src={AnnieTransparentMedium} />
+<BlogItemCollection>
+  <BlogImage src={AnnieTransparentMedium} alt={"Annie's Den Logo"} />
+</BlogItemCollection>
 
 P.S. big thanks to [JB](https://jbcarreon123.nekoweb.org/) for helping me solve some issues i had setting up this blog! go check out their page!
