@@ -7,8 +7,6 @@
 	Welcome to my webpage! Check out the links in the header to learn more about me!
 </p>
 
-<p>Testing...</p>
-
 <p>Here's a couple links to teams I am a part of!</p>
 <ul>
 	<li><a href="https://umeyu.me">UmeYume</a></li>
