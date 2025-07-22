@@ -27,17 +27,6 @@ jobs:
                     NEKOWEB_COOKIE: ${{ secrets.NEKOWEB_COOKIE }}
                 run: |
                     npm run build
-                    
-            -   name: Upload Artifacts
-                uses: actions/upload-pages-artifact@v3
-                with:
-                    path: 'build/'
-            
-    deploy:
-        needs: build
-        runs-on: ubuntu-latest
-        
-        steps:
             -   name: deploy2nekoweb
                 uses: indiefellas/deploy2nekoweb@v4
                 with:
