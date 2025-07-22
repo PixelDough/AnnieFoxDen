@@ -1,8 +1,5 @@
 <script lang="ts">
-	let { title: titleOverride = null, description = null, type = null, site_name = null, image = null} = $props();
-	import { title as titleStored } from "$lib/store.js";
-
-	let title = titleOverride ?? $titleStored;
+	let { title = null, description = null, type = null, site_name = null, image = null} = $props();
 
 	import AnnieTransparentMedium from '$lib/assets/AnnieTransparentMedium.png';
 	import AnniePfpZoomOut from '$lib/assets/AnniePfpZoomOut.png';
