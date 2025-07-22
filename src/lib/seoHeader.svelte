@@ -16,9 +16,9 @@
 
 	<meta property="og:site_name" content={site_name ?? "Annie's Den"} />
 	<meta property="og:type" content={type ?? "website"} />
-	<meta property="og:title" content={$title} />
+	<meta property="og:title" content={title} />
 	<meta property="og:description" content={description ?? ""} />
 	<meta property="og:image" content={image ?? AnniePfpZoomOut} />
 	
-	<title>{$title}</title>
+	<title>{title}</title>
 </svelte:head>
