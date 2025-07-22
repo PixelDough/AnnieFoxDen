@@ -1,6 +1,7 @@
 <script>
 	import Button from '$lib/button.svelte';
 	import HoverObject from '$lib/hoverObject.svelte';
+	import SeoHeader from '$lib/seoHeader.svelte';
 	import { title } from '$lib/store.js';
 	title.set("Portfolio.Games");
 	import { Vimeo } from 'sveltekit-embed';
@@ -17,6 +18,8 @@
 		}
 	});
 </script>
+
+<SeoHeader title="Portfolio - {data.post.title}" />
 
 <style>
 	h2 {

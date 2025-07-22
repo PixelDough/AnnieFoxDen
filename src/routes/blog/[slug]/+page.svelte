@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { formatDate, toDateTime } from '$lib/utils'
 	import { title } from '$lib/store.js';
+	import SeoHeader from '$lib/seoHeader.svelte';
 	title.set("Blog");
 	
 	let { data } = $props()
@@ -8,14 +9,10 @@
 
 <svelte:head>
 	<title>{data.title}</title>
-	<meta property="og:site_name" content="Annie's Den" />
-	<meta property="og:type" content="article" />
-	<meta property="og:title" content={data.title} />
-	<meta property="og:description" content={data.description} />
-	<meta property="og:image" content={data.thumbnail} />
 	<meta property="article:published_time" content={toDateTime(data.date).toISOString()} />
 </svelte:head>
 
+<SeoHeader site_name="Annie's Den" title={data.title} type="article" description={data.description} image={data.thumbnail} />
 <article>
 	<hgroup>
 		<h1>{data.title}</h1>

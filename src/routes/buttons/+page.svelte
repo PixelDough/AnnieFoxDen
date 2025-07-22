@@ -6,6 +6,7 @@
 	import CopyOnClick from '$lib/copyOnClick.svelte';
 	import ImageButton from '$lib/imageButton.svelte';
 	import UrlButton from '$lib/urlButton.svelte';
+	import SeoHeader from "$lib/seoHeader.svelte";
 	
 	const friendsButtons = import.meta.glob(
 		'$lib/assets/buttons/friends/*.{gif,png,jpg,jpeg,PNG,JPEG}',
@@ -56,6 +57,8 @@
 		cursor: pointer;
 	}
 </style>
+
+<SeoHeader title="Buttons" />
 
 <div>
 	<h2>My buttons!</h2>

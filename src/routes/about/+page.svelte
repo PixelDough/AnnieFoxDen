@@ -1,7 +1,10 @@
 <script>
+	import SeoHeader from "$lib/seoHeader.svelte";
 	import { title } from "$lib/store.js";
 	title.set("About")
 </script>
+
+<SeoHeader title="About" />
 
 <h2>About Me</h2>
 <p>Hi! I'm Annalise, but you can just call me Annie though!</p>

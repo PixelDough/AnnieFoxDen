@@ -16,7 +16,6 @@
 
 	import { Canvas } from '@threlte/core'
   	import Scene from '$lib/Scene.svelte'
-	import SeoHeader from '$lib/seoHeader.svelte';
 </script>
 
 <svelte:head>
