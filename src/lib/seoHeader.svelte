@@ -2,7 +2,7 @@
 	let { title: titleOverride = null, description = null, type = null, site_name = null, image = null} = $props();
 	import { title as titleStored } from "$lib/store.js";
 
-	let title = titleOverride ?? titleStored;
+	let title = titleOverride ?? $titleStored;
 
 	import AnnieTransparentMedium from '$lib/assets/AnnieTransparentMedium.png';
 </script>
@@ -13,13 +13,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta name="darkreader-lock" />
 
-	{#key title}
-		<meta property="og:site_name" content={site_name ?? "Annie's Den"} />
-		<meta property="og:type" content={type ?? "website"} />
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description ?? ""} />
-		<meta property="og:image" content={image ?? AnnieTransparentMedium} />
-	{/key}
+	<meta property="og:site_name" content={site_name ?? "Annie's Den"} />
+	<meta property="og:type" content={type ?? "website"} />
+	<meta property="og:title" content={$title} />
+	<meta property="og:description" content={description ?? ""} />
+	<meta property="og:image" content={image ?? AnnieTransparentMedium} />
 	
-	<title>{title}</title>
+	<title>{$title}</title>
 </svelte:head>

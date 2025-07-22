@@ -20,8 +20,6 @@
 </script>
 
 <svelte:head>
-	<SeoHeader />
-
 	<!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 	<link
@@ -31,6 +29,7 @@
 	<title>{$title}</title>
 </svelte:head>
 
+<SeoHeader />
 <audio src={Music} autoplay volume={0.2} loop></audio>
 <div style="position: fixed; width: 100%; height: 100%; z-index: -1; left: 0; top: 0;">
 	<div style="width: 100%; height: 100%;">
