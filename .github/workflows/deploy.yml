@@ -1,19 +1,47 @@
-on: [push]
+on:
+  push:
+    branches: ['main']
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    name: deploy2nekoweb
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+    build:
+        runs-on: ubuntu-latest
+        name: deploy2nekoweb
+        steps:
+            -   name: Checkout
+                uses: actions/checkout@v4
+                
+            # your build step here
+            -   name: Install Node.js
+                uses: actions/setup-node@v4
+                with:
+                    node-version: 20
+                    cache: npm
+            
+            -   name: Install dependencies
+                run: npm install
+            
+            -   name: Build Site
+                env:
+                    BASE_PATH: '/${{ github.event.repository.name }}'
+                    NEKOWEB_API_KEY: ${{ secrets.NEKOWEB_API_KEY }}
+                    NEKOWEB_COOKIE: ${{ secrets.NEKOWEB_COOKIE }}
+                run: |
+                    npm run build
+                    
+            -   name: Upload Artifacts
+                uses: actions/upload-pages-artifact@v3
+                with:
+                    path: 'build/'
+            
+    deploy:
+        needs: build
+        runs-on: ubuntu-latest
         
-      # your build step here
-        
-      - name: deploy2nekoweb
-        uses: indiefellas/deploy2nekoweb@v4
-        with:
-          nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
-          nekoweb-cookie: ${{ secrets.NEKOWEB_COOKIE }}
-          nekoweb-folder: 'site'
-          directory: 'public'
+        steps:
+            -   name: deploy2nekoweb
+                uses: indiefellas/deploy2nekoweb@v4
+                with:
+                    nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
+                    nekoweb-cookie: ${{ secrets.NEKOWEB_COOKIE }}
+                    nekoweb-folder: 'site'
+                    directory: 'public'
