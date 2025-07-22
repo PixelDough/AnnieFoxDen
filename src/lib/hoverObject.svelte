@@ -1,5 +1,5 @@
 <script>
-	const { children } = $props();
+	const { children, hoverScale = 1 } = $props();
 	
 	let element;
 	var hovered = $state(false);
@@ -19,9 +19,10 @@
 		if (!hovered) { return; }
 		
 		const rect = element.getBoundingClientRect();
-		const xoff = ((e.clientX - rect.left - rect.width / 2) / rect.width) * 2;
-		const yoff = ((e.clientY - rect.top - rect.height / 2) / rect.height) * 2;
-		const transform = `translate3d(0, 0, 3.0cm) rotate3d(${-yoff}, ${xoff}, 0, ${Math.sqrt(xoff * xoff + yoff * yoff) * 30}deg)`;
+		const xoff = ((e.clientX - rect.left - rect.width / 2) / rect.width) * 2 * hoverScale;
+		const yoff = ((e.clientY - rect.top - rect.height / 2) / rect.height) * 2 * hoverScale;
+		const translate = 3.0 * hoverScale;
+		const transform = `translate3d(0, 0, ${translate}cm) rotate3d(${-yoff}, ${xoff}, 0, ${Math.sqrt(xoff * xoff + yoff * yoff) * 30}deg)`;
 		const brightness = 1.0 - yoff / 4 - xoff / 4;
 		
 		if (element.children[0]) {
@@ -41,6 +42,9 @@
 		
 		position: relative;
 		z-index: 0;
+		
+		width: 100%;
+		height: 100%;
 	}
 	.badge img:hover {
 		filter: brightness(1.1);

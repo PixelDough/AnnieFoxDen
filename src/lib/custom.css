@@ -1,5 +1,9 @@
 * {
 	box-sizing: border-box;
+	/* font-family: 'Geist Mono Variable', monospace; */
+	font-family: 'Raleway Variable', sans-serif;
+	font-display: swap;
+	font-weight: 400;
 }
 
 h2 {
@@ -34,7 +38,7 @@ body {
 	
 	font-display: swap;
 	font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	letter-spacing: 0.1em;
+	letter-spacing: 0.05ch;
 	font-weight: 600;
 	font-style: normal;
 }

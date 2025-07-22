@@ -2,11 +2,10 @@
 	import { title } from "$lib/store.js";
 	title.set("Buttons!")
 	
-	import Button from '$lib/button.svelte';
+	import AnnieButton from '$lib/assets/AnnieButton.gif';
+	import CopyOnClick from '$lib/copyOnClick.svelte';
 	import ImageButton from '$lib/imageButton.svelte';
 	import UrlButton from '$lib/urlButton.svelte';
-	import CopyOnClick from '$lib/copyOnClick.svelte';
-	import AnnieButton from '$lib/assets/AnnieButton.gif';
 	
 	const friendsButtons = import.meta.glob(
 		'$lib/assets/buttons/friends/*.{gif,png,jpg,jpeg,PNG,JPEG}',
@@ -62,6 +61,7 @@
 	<h2>My buttons!</h2>
 	<p>Click to copy the html to your clipboard!</p>
 	<div class="buttonList">
+		<img src={AnnieButton} alt="test" style="display: none;" />
 		<CopyOnClick stringToCopy={anniesButtonHtml}>
 			<UrlButton html={anniesButtonHtml} onclick={() => {}} />
 		</CopyOnClick>
@@ -94,6 +94,7 @@
 		{/each}
 		<UrlButton html='<a title="melonking" href="https://melonking.net"><img width="88px" height="31px" src="https://melonking.net/images/badges/MELON-BADGE-2.GIF"/></a>' />
 		<UrlButton html='<a title="melonland" href="https://melonland.net"><img width="88px" height="31px" src="https://melonland.net/images/melonland-badge-2.gif"/></a>' />
+		<UrlButton html='<a href="https://hyphin.net"><img src="https://hyphin.net/Assets/Images/HyphButtonLow.gif" alt="hyphin dot net" width="88" height="31"></a>' />
 		<UrlButton html='<a title="Nitrome - Play Free Games" href="http://www.nitrome.com"><img width="88px" height="31px" src="https://nitrome.com/images/links/nitrome-link.png"/></a>' />
 		<UrlButton html='<a title="rubybulbs" href="https://rubybulbs.nekoweb.org"><img width="88px" height="31px" src="https://rubybulbs.nekoweb.org/img/newbutt.png"/></a>' />
 		<UrlButton html='<a href="https://angelinmyhead.nekoweb.org/"><img src="https://dl.dropbox.com/scl/fi/oywze0923d21xbdgh2hve/barcodeaimh.gif?rlkey=vp91ch8orfjcc45e92rtpy2if&st=ohoawsnr&raw=1"></a>' />

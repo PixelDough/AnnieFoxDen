@@ -2,6 +2,12 @@
 	let { children } = $props();
 	import { page } from '$app/state';
 	import '$lib/custom.css';
+	import '@fontsource/unifontex';
+	import "@fontsource/opendyslexic"; // Defaults to weight 400
+	import "@fontsource/opendyslexic/400.css"; // Specify weight
+	import "@fontsource/opendyslexic/400-italic.css"; // Specify weight and style
+	import '@fontsource-variable/geist-mono';
+	import '@fontsource-variable/raleway';
 	import AnnieTransparentMedium from '$lib/assets/AnnieTransparentMedium.png';
 	import Header from '$lib/header.svelte';
 	

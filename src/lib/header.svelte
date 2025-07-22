@@ -14,6 +14,7 @@
 	<div class="menubar">
 		<a href="/">Home</a>
 		<a href="/about">About</a>
+		<a href="/blog">Blog</a>
 		<a href="/portfolio/games">Portfolio</a>
 		<a href="/buttons">Buttons</a>
 	</div>

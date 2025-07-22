@@ -1,0 +1,36 @@
+---
+title: Welcome to my Blog!
+description: An introduction to my blog.
+date: '2025-07-21'
+# thumbnail: "/src/lib/assets/portfolio/thumbnails/deep-space-bellhop.png"
+# thumbnail: "https://media1.tenor.com/m/x8v1oNUOmg4AAAAd/rickroll-roll.gif"
+categories:
+  - general
+published: true
+---
+
+<script>
+  import BlogImage from '$lib/blogImage.svelte';
+  import BlogImages from '$lib/blogImages.svelte';
+  import AnnieTransparentMedium from '$lib/assets/AnnieTransparentMedium.png'
+  const images = [
+	  "https://media1.tenor.com/m/x8v1oNUOmg4AAAAd/rickroll-roll.gif",
+	  "https://media1.tenor.com/m/ryp18LniYBsAAAAd/cat-laugh.gif",
+  ]
+</script>
+
+## hello world! welcome to my personal blog!
+
+i tend to enjoy one-on-one conversations, sharing what i'm working on with friends directly. however, lately i've been feeling the urge to post what i'm working on in a place that is easy for me to share with others without having to copy and paste text, images, and videos to them. i do not enjoy posting on social media, it just does not feel personal or genuine enough.
+
+so today i had the idea of starting a blog on my personal website! that way i can type all i want in a post, include images wherever in the post i want, and style it all to my liking! this way i can also share the blog posts i make in direct messages, as well as more public spaces like chatrooms and social media.
+
+<BlogImages images={images} height="200px"/>
+
+take a look at that image embed!
+
+anyways, that's all for this blog post. hopefully gonna share what i've been working on here soon!
+
+<BlogImage src={AnnieTransparentMedium} />
+
+P.S. big thanks to [JB](https://jbcarreon123.nekoweb.org/) for helping me solve some issues i had setting up this blog! go check out their page!
