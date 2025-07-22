@@ -19,7 +19,10 @@
 
 	import PortfolioThumbnail from '$lib/portfolioThumbnail.svelte';
 	import HoverObject from '$lib/hoverObject.svelte';
+	import SeoHeader from '$lib/seoHeader.svelte';
 </script>
+
+<SeoHeader title="Blog" />
 
 <style>
 	.item {
