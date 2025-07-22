@@ -1,7 +1,7 @@
 ---
 title: Welcome to my Blog!
 description: An introduction to my blog.
-date: '2025-07-21'
+date: '2025-07-21, 17:00'
 # thumbnail: "/src/lib/assets/portfolio/thumbnails/deep-space-bellhop.png"
 # thumbnail: "https://media1.tenor.com/m/x8v1oNUOmg4AAAAd/rickroll-roll.gif"
 categories:

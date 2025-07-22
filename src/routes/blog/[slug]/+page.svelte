@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { formatDate } from '$lib/utils'
+	import { formatDate, toDateTime } from '$lib/utils'
 	import { title } from '$lib/store.js';
 	title.set("Blog");
 	
@@ -8,8 +8,12 @@
 
 <svelte:head>
 	<title>{data.title}</title>
+	<meta property="og:site_name" content="Annie's Den" />
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={data.title} />
+	<meta property="og:description" content={data.description} />
+	<meta property="og:image" content={data.thumbnail} />
+	<meta property="article:published_time" content={toDateTime(data.date).toISOString()} />
 </svelte:head>
 
 <article>
