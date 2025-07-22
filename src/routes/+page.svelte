@@ -1,8 +1,10 @@
 <script>
+	import SeoHeader from "$lib/seoHeader.svelte";
 	import { title } from "$lib/store.js";
-	title.set("Annie's Fox Den")
+	title.set("Annie's Den")
 </script>
 
+<SeoHeader title="Annie's Den" />
 <p>
 	Welcome to my webpage! Check out the links in the header to learn more about me!
 </p>
