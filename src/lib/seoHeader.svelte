@@ -5,6 +5,7 @@
 	let title = titleOverride ?? $titleStored;
 
 	import AnnieTransparentMedium from '$lib/assets/AnnieTransparentMedium.png';
+	import AnniePfpZoomOut from '$lib/assets/AnniePfpZoomOut.png';
 </script>
 
 <svelte:head>
@@ -17,7 +18,7 @@
 	<meta property="og:type" content={type ?? "website"} />
 	<meta property="og:title" content={$title} />
 	<meta property="og:description" content={description ?? ""} />
-	<meta property="og:image" content={image ?? AnnieTransparentMedium} />
+	<meta property="og:image" content={image ?? AnniePfpZoomOut} />
 	
 	<title>{$title}</title>
 </svelte:head>
