@@ -5,9 +5,6 @@ jobs:
       runs-on: ubuntu-latest
       name: deploy2nekoweb
       steps:
-         - name: Checkout
-           uses: actions/checkout@v4
-		   
          - name: deploy2nekoweb
 		   uses: indiefellas/deploy2nekoweb@v4
 		   with:
