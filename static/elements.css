@@ -7,18 +7,20 @@
 /* Must start with ".site-box". Change how your website will appear on main nekoweb site: https://lune.dimden.dev/405a44b7e5.png */
 .site-box {
     text-align: center;
-    background-image: url(https://anniefoxden.nekoweb.org/cookiebox.png); /* Only nekoweb URLs allowed, use full url to your site like https://example.nekoweb.org/images/coolbg.png */
+    background-image: url(https://anniefoxden.nekoweb.org/anniesden.dev/cookiebox.png);
+    /* Only nekoweb URLs allowed, use full url to your site like https://example.nekoweb.org/images/coolbg.png */
     background-repeat: no-repeat;
     background-position: center;
     color: #ffa500;
     font-size: 12px;
 }
+
 .site-box .sitefeature {
     opacity: 0
 }
 
 .site-box:after {
-    content: url(https://anniefoxden.nekoweb.org/cookiebox_overlay.png);
+    content: url(https://anniefoxden.nekoweb.org/anniesden.dev/cookiebox_overlay.png);
     width: 275px;
     height: 190px;
     position: absolute;
@@ -32,18 +34,17 @@
     transform: scale(1.4) translateY(-10px);
 }
 
-.site-box > a > p {
+.site-box>a>p {
     color: #ffa500;
     font-weight: bold;
     transform: translateY(-15px);
 }
-.site-box > a > span {
+
+.site-box>a>span {
     color: #ffa500;
     transform: translateY(-15px);
     display: block;
 }
 
 /* Style for your 'Follow on Nekoweb' button (<iframe src="https://nekoweb.org/frame/follow" frameborder="0" width="170" height="28"></iframe>) */
-.follow {
-
-}
+.follow {}
