@@ -17,8 +17,9 @@
 <h3>Game Dev</h3>
 <ul>
 	<li>MonoGame</li>
-	<li>Jetbrains Rider</li>
 	<li>Unity 3D</li>
+	<li>Godot (Mono)</li>
+	<li>Jetbrains Rider</li>
 </ul>
 <h3>Music</h3>
 <ul>
