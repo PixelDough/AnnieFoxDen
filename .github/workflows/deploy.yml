@@ -28,9 +28,11 @@ jobs:
         run: |
           npm run build
       - name: deploy2nekoweb
-        uses: indiefellas/deploy2nekoweb@v1.0.0
+        uses: indiefellas/deploy2nekoweb@main
         with:
           nekoweb-api-key: ${{ secrets.NEKOWEB_API_KEY }}
           nekoweb-cookie: ${{ secrets.NEKOWEB_COOKIE }}
           nekoweb-folder: '/anniesden.dev/'
+          nekoweb-domain: 'anniesden.dev'
+          nekoweb-username: 'anniefoxden'
           directory: 'build'
