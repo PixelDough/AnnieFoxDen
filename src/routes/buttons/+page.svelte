@@ -80,7 +80,8 @@
 			<ImageButton path={_path} imagePath={module} />
 		{/each}
 		<UrlButton html='<a title="bellets :-DD" href="https://bellets.me"><img width="88px" height="31px" src="https://bellets.me/assets/bellets.gif"/></a>' />
-		<UrlButton html='<a href="https://racc.at/"><img src="https://racc.at/media/uploads/88x31.png" alt="racc.at 88x31"/></a>' />
+		<UrlButton html='<a href="https://racc.at/"><img src="https://racc.at/media/uploads/88x31.png" alt="Ketts site!"/></a>' />
+		<UrlButton html='<a href="https://axoga.to/"><img src="https://axoga.to/images/stamps/chai.png" alt="Chais site!"/></a>' />
 		<UrlButton html='<a href="https://compactbunker.org"><img src="https://compactbunker.org/blinkies/personal.gif"></a>' />
 		<UrlButton html='<a href="https://puddingpudd.com"><img src="https://puddingpudd.com/buttons/Pudd_Button.gif" width="88" height="31"></a>' />
 		<UrlButton html='<a href="https://mimiya.nekoweb.org"><img src="https://mimiya.nekoweb.org/button.png" width="88" height="31"></a>' />
