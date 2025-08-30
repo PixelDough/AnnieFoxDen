@@ -1,5 +1,5 @@
 import { json } from '@sveltejs/kit'
-import { getPosts } from '$lib/posts/getPosts.ts'
+import { getPosts } from '$lib/posts/getPosts'
 
 export async function load({ fetch, params }) {
 	let posts = await Promise.all(
