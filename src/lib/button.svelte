@@ -52,6 +52,7 @@
 	}
 	
 	.badgeContent {
+		text-indent: 0px;
 		transition-duration: 0.05s;
 		will-change: transform;
 		image-rendering: pixelated;

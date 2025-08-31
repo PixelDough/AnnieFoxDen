@@ -114,7 +114,7 @@
 			<UrlButton html='<a href=https://maddoxxing.neocities.org/><img src="https://maddoxxing.nekoweb.org/graphics/button3.gif"></a>' />
 			<UrlButton html='<a href="http://openbooks.neocities.org"><img src="https://openbooks.neocities.org/img/88x31.gif" height="31" width="88" style="image-rendering:pixelated;"/></a>' />
 			<UrlButton html='<a title="Chataigne Online" href="https://chataigne.nekoweb.org/"><img width="88px" height="31px" src="https://chataigne.nekoweb.org/button1.jpg"/></a>' />
-			
+			<UrlButton html='<a title="Your new vacation location!" href="https://melonsoda.nekoweb.org"><img width="88px" height="31px" src="https://melonsoda.nekoweb.org/images/button.gif"/></a>' />
 		</div>
 	</div>
 </ContainerBubble>

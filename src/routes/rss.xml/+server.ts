@@ -12,7 +12,8 @@ function rmIncompTags(text: string): string {
     const componentRegex = /<[A-Z][a-zA-Z0-9]*(\s[^>]*)*(\/>|>)/g;
     const scriptRegex = /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi;
     const frontmatterRegex = /^---[\s\S]*?---|^(\+\+\+)([\s\S]*?)\1/g;
-	const componentCloseRegex = /<\/.*>/gi
+	const componentOpenRegex = /<.+?>/gi
+	const componentCloseRegex = /<\/.+?>/gi
 
 	// Gets the import lines
 	const importStringsRegex = /import.*(?<=\').+?(?<=\')/gi;
@@ -118,6 +119,7 @@ function rmIncompTags(text: string): string {
 			.replace(componentRegex, '[Content available on website]')
             .replace(scriptRegex, '')
             .replace(frontmatterRegex, '')
+			.replace(componentOpenRegex, '')
 			.replace(componentCloseRegex, '')
 }
 

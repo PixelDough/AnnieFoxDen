@@ -1,5 +1,5 @@
 <script>
-	const { src = "", alt, link, height="200px" } = $props();
+	const { src = "", alt, height="200px" } = $props();
 	import HoverObject from "$lib/hoverObject.svelte"
 </script>
 
@@ -15,7 +15,5 @@
 </style>
 
 <HoverObject isSpan={true}>
-	<!-- <a href={link ?? src} target="_blank"> -->
-		<img src={src} alt={alt} style="height: {height}" />
-	<!-- </a> -->
+	<img src={src} alt={alt} style="height: {height}" />
 </HoverObject>

@@ -16,34 +16,33 @@
 </svelte:head>
 
 <SeoHeader site_name="Annie's Den" title={data.title} type="article" description={data.description} image={data.thumbnail} />
-<article>
-	<ContainerBubble>
-	<hgroup>
-		<h1>{data.title}</h1>
-		<div class="dateAndTags">
-			<h5 style="date">Published {formatDate(data.date)}</h5>
-			<div class="horizontal">
-				{#each data.categories as category}
-					<TagChip label={`${category}`} href="https://anniesden.dev/" />
-				{/each}
+<ContainerBubble>
+	<article>
+		<hgroup>
+			<h1>{data.title}</h1>
+			<div class="dateAndTags">
+				<h5 style="date">Published {formatDate(data.date)}</h5>
+				<div class="horizontal">
+					{#each data.categories as category}
+						<TagChip label={`${category}`} href="https://anniesden.dev/" />
+					{/each}
+				</div>
 			</div>
-		</div>
-	</hgroup>
-	
-	<hr/>
+		</hgroup>
+		
+		<hr/>
 
-	<div class="prose">
-		<data.content />
-	</div>
-	
-	</ContainerBubble>
-</article>
+		<div class="prose">
+			<data.content />
+		</div>
+	</article>
+</ContainerBubble>
 
 <style>
 	article {
 		margin-inline: auto;
 		margin: 8px;
-		
+
 		* {
 			margin-top: 8px;
 			margin-bottom: 8px;
@@ -59,10 +58,7 @@
 		}
 		
 		.prose {
-			margin: 32px;
-			[class^="p"] {
-				text-indent: 3ch;
-			}
+			margin: 4px;
 		}
 
 		.dateAndTags {
