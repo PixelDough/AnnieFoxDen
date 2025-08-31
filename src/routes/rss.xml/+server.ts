@@ -98,7 +98,7 @@ function rmIncompTags(text: string): string {
 			return;
 		}
 		const key = keyCheck![0];
-		const value = imagePaths[key]!;
+		const value = imageModules[key]!;
 		console.log(`the value is ${l}`);
 		if (!value) return;
 		const imageUrl = dev ? `http://localhost:5173${value}` : `https://anniesden.dev${value}`
