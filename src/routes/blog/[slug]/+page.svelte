@@ -2,6 +2,9 @@
 	import { formatDate, toDateTime } from '$lib/utils'
 	import { title } from '$lib/store.js';
 	import SeoHeader from '$lib/seoHeader.svelte';
+	import TagChip from '$lib/tagChip.svelte';
+	import { label } from 'three/tsl';
+	import ContainerBubble from '$lib/containerBubble.svelte';
 	title.set("Blog");
 	
 	let { data } = $props()
@@ -14,9 +17,17 @@
 
 <SeoHeader site_name="Annie's Den" title={data.title} type="article" description={data.description} image={data.thumbnail} />
 <article>
+	<ContainerBubble>
 	<hgroup>
 		<h1>{data.title}</h1>
-		<h5>Published {formatDate(data.date)}</h5>
+		<div class="dateAndTags">
+			<h5 style="date">Published {formatDate(data.date)}</h5>
+			<div class="horizontal">
+				{#each data.categories as category}
+					<TagChip label={`${category}`} href="https://anniesden.dev/" />
+				{/each}
+			</div>
+		</div>
 	</hgroup>
 	
 	<hr/>
@@ -25,13 +36,7 @@
 		<data.content />
 	</div>
 	
-	<hr/>
-	
-	<div class="tags">
-		{#each data.categories as category}
-			<h5 class="tag">&num;{category}</h5>
-		{/each}
-	</div>
+	</ContainerBubble>
 </article>
 
 <style>
@@ -53,15 +58,29 @@
 			gap: 1ch;
 		}
 		
-		.tag {
-			color: #bc7aff
-		}
-		
 		.prose {
 			margin: 32px;
 			[class^="p"] {
 				text-indent: 3ch;
 			}
+		}
+
+		.dateAndTags {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			max-width: 100%;
+		}
+
+		.date {
+			flex-grow: 100;
+		}
+
+		.horizontal {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 8px;
 		}
 	}
 </style>

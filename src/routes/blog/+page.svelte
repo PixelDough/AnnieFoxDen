@@ -20,6 +20,8 @@
 	import PortfolioThumbnail from '$lib/portfolioThumbnail.svelte';
 	import HoverObject from '$lib/hoverObject.svelte';
 	import SeoHeader from '$lib/seoHeader.svelte';
+	import TagChip from '$lib/tagChip.svelte';
+	import ContainerBubble from '$lib/containerBubble.svelte';
 </script>
 
 <SeoHeader title="Blog" />
@@ -28,38 +30,42 @@
 	.item {
 		height: 140px;
 	}
+	.container {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: fit-content;
+		gap: 10px;
+	}
 	.title-box {
-		position: absolute;
+		position: relative;
 		display: flex;
 		justify-content: space-between;
-		top: 0px;
-		left: 0px;
-		right: 0px;
-		padding: 16px;
-		height: 100%;
+		height: fit-content;
 		margin: 0;
-		background: linear-gradient(180deg,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.8) 60%, rgba(0, 0, 0, 0.4) 100%);
-		/* mask: linear-gradient(
-			rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.95) 50%, rgba(0, 0, 0, 0.9) 100%
-		); */
-		/* backdrop-filter: blur(5px); */
-		background-clip: padding-box;
-		border-radius: 16px;
-		overflow: clip;
 	}
 	.title {
 		padding: 0;
 		padding-bottom: 4px;
 		margin: 0;
-		color: white;
-		text-shadow: 2px 2px 4px black;
+		flex-grow: 100;
+	}
+	.date {
+		padding: 0;
+		padding-bottom: 16px;
+		margin: 0;
+		color: #d7afff;
+		flex-grow: 100;
 	}
 	.details {
 		align-items: end;
 		text-align: end;
+		max-width: 50%;
+		height: fit-content;
 	}
 	.tag {
-		color: #bc7aff;
+		color: #d7afff;
 		padding: 0;
 		margin: 0;
 	}
@@ -73,33 +79,42 @@
 	}
 
 	.blog-container {
-		display: block;
+		/* display: block; */
 		width: 100%;
+	}
+
+	.tags {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: start;
+		align-content: start;
+		justify-content: start;
+		gap: 8px;
 	}
 </style>
 
 <div class="grid">
 	{#each sortedArticles as article }
-		<HoverObject hoverScale={0.3} --display="block">
-			<a class="blog-container" href="./{article.articleSlug}">
-				<div class="item">
-					<img src={article.metadata.thumbnail} alt={article.articleSlug} class="thumbnail" />
-					<div class="title-box">
-						<div>
-							<h3 class="title">{article.metadata.title}</h3>
+		<div class="item">
+			<!-- <img src={article.metadata.thumbnail} alt={article.articleSlug} class="thumbnail" /> -->
+			<ContainerBubble>
+				<span class="container">
+					<span class="title-box">
+						<span>
+							<a class="blog-container" href="./{article.articleSlug}"><h3 class="title">{article.metadata.title}</h3></a>
 							<h5 class="tag">{article.metadata.description}</h5>
-						</div>
+						</span>
 						<div class="details">
-							<h4 class="title">{formatDate(article.metadata.date)}</h4>
-							{#each article.metadata.categories as category}
-								<h6>
-									<span class="tag">&num;{category}</span>
-								</h6>
-							{/each}
+							<h4 class="date">{formatDate(article.metadata.date)}</h4>
 						</div>
+					</span>
+					<div class="tags">
+						{#each article.metadata.categories as category}
+							<TagChip label={category} href="" />
+						{/each}
 					</div>
-				</div>
-			</a>
-		</HoverObject>
+				</span>
+			</ContainerBubble>
+		</div>
 	{/each}
 </div>

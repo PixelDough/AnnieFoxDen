@@ -10,20 +10,17 @@
 
 	import PortfolioThumbnail from '$lib/portfolioThumbnail.svelte';
 	import HoverObject from '$lib/hoverObject.svelte';
+	import ContainerBubble from '$lib/containerBubble.svelte';
 </script>
 
-<p>
-	This section is constantly being updated. Check back for more projects soon!
-</p>
-
-<h5>
-	Last updated: <br />
-	{lastUpdateStringGMT}
-	<br />
-	{lastUpdateString}
-</h5>
-
 <style>
+
+	p {
+		margin-top: 0;
+	}
+	h5 {
+		margin-bottom: 0;
+	}
 	.grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -40,17 +37,35 @@
 		color: white;
 		text-shadow: 2px 2px 4px black;
 	}
+	.itemContainer {
+		border-radius: 16px;
+	}
 </style>
 
-<div class="grid">
-	{#each data.summaries as { slug, title, date }}
-		<HoverObject --display="block">
-			<a href="./{slug}">
-				<div class="item">
-					<PortfolioThumbnail slug={slug} />
-					<h3 class="title">{title}</h3>
-				</div>
-			</a>
-		</HoverObject>
-	{/each}
-</div>
+<ContainerBubble>
+	<p>
+		This section is constantly being updated. Check back for more projects soon!
+	</p>
+
+	<h5>
+		Last updated: <br />
+		{lastUpdateStringGMT}
+		<br />
+		{lastUpdateString}
+	</h5>
+</ContainerBubble>
+
+<ContainerBubble>
+	<div class="grid">
+		{#each data.summaries as { slug, title, date }}
+			<HoverObject --display="block">
+				<a href="./{slug}" class="itemContainer">
+					<div class="item">
+						<PortfolioThumbnail slug={slug} />
+						<h3 class="title">{title}</h3>
+					</div>
+				</a>
+			</HoverObject>
+		{/each}
+	</div>
+</ContainerBubble>
