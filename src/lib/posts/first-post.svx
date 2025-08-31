@@ -56,3 +56,5 @@ anyways, that's all for this blog post. hopefully gonna share what i've been wor
 </BlogItemCollection>
 
 P.S. big thanks to [JB](https://jbcarreon123.nekoweb.org/) for helping me solve some issues i had setting up this blog! go check out their page!
+
+(note: image formatting/layout might look better on the blog on my website)
