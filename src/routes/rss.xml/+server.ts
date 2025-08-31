@@ -20,9 +20,8 @@ function rmIncompTags(text: string): string {
 	const importNameRegex = /(?<=import ).+?(?= from)/i;
 	// Gets the path of the import
 	const importPathRegex = /(?<=\').+?(?=\')/i;
-	// Gets the markdown image lines that are using a sveltekit import name as the url
-	// TODO: UPDATE DESC AND NAME
-	const markdownImageWithSvelteImportRegex = /\(\{.+?\}\)/gi;
+	// Gets the sections that are like this: ({content})
+	const getParenthesisCurlyBraceSectionRegex = /\(\{.+?\}\)/gi;
 	// Gets the part of a string that is between curly brackets (including the brackets)
 	const betweenWithCurlyBracketsRegex = /(?=\{).+?(?<=\})/i;
 	// Gets the part of a string that is between curly brackets (excluding the brackets)
@@ -50,7 +49,7 @@ function rmIncompTags(text: string): string {
 	console.log(imports);
 
 	// Convert any lines that use import keys to use the approproate import values
-	const imageLines = text.match(markdownImageWithSvelteImportRegex);
+	const imageLines = text.match(getParenthesisCurlyBraceSectionRegex);
 	console.log(imageLines)
 	imageLines?.forEach(l => {
 		const keyCheck = l.match(betweenCurlyBracketsRegex)
@@ -103,7 +102,7 @@ function rmIncompTags(text: string): string {
 		if (!value) return;
 
 		var imageUrl = dev ? `http://localhost:5173${value}` : `https://anniesden.dev${value}`
-		if (!value.startsWith("/_app/")) {
+		if (!value.startsWith("/_app/") && !value.startsWith("/src/lib/")) {
 			imageUrl = value;
 		}
 		const fixedLine = l.replace(markdownImageUrlRegex, imageUrl);
