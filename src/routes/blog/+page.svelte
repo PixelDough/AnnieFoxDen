@@ -101,8 +101,10 @@
 				<span class="container">
 					<span class="title-box">
 						<span>
-							<a class="blog-container" href="./{article.articleSlug}"><h3 class="title">{article.metadata.title}</h3></a>
-							<h5 class="tag">{article.metadata.description}</h5>
+							<a class="blog-container" href="./{article.articleSlug}">
+								<h2 class="title">{article.metadata.title}</h2>
+							</a>
+							<h4 class="tag">{article.metadata.description}</h4>
 						</span>
 						<div class="details">
 							<h4 class="date">{formatDate(article.metadata.date)}</h4>
