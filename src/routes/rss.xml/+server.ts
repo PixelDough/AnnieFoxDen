@@ -79,9 +79,9 @@ function rmIncompTags(text: string): string {
 	const imageModules: { [key: string]: string } = {}
 	Object.entries(imagesGlob).forEach(pathModulePair => {
 		const [path, module] = pathModulePair;
-		const keyCheck = module.match(imageAssetDirectoryRegex);
+		const keyCheck = path.match(imageAssetDirectoryRegex);
 		if (!keyCheck) {
-			console.log(`Failed to image asset directory in module: ${module}`)
+			console.log(`Failed to image asset directory in path: ${path}`)
 			return;
 		}
 		const key = keyCheck[0];
