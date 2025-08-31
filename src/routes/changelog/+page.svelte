@@ -1,5 +1,5 @@
 <script>
-	import ContainerBubble from "$lib/containerBubble.svelte";
+	
 	import { title } from "$lib/store.js";
 	title.set("Changelog")
 </script>
@@ -10,11 +10,11 @@
 	}
 </style>
 
-<ContainerBubble>
+<div class="container-bubble">
 	<h6>Note: Format is yy-mm-dd</h6>
-</ContainerBubble>
+</div>
 
-<ContainerBubble>
+<div class="container-bubble">
 	<h3>25-08-30</h3>
 	<ul>
 		<li>Created my RSS feed for my blog! (https://anniesden.dev/rss.xml)</li>
@@ -76,4 +76,4 @@
 		<li>Added buttons for bscit and mookalh</li>
 		<li>Added section for cool site buttons</li>
 	</ul>
-</ContainerBubble>
+</div>

@@ -93,11 +93,11 @@
 	}
 </style>
 
-<div class="grid">
+<div class="grid basic-gap">
 	{#each sortedArticles as article }
 		<div class="item">
 			<!-- <img src={article.metadata.thumbnail} alt={article.articleSlug} class="thumbnail" /> -->
-			<ContainerBubble>
+			<div class="container-bubble">
 				<span class="container">
 					<span class="title-box">
 						<span>
@@ -116,7 +116,7 @@
 						{/each}
 					</div>
 				</span>
-			</ContainerBubble>
+			</div>
 		</div>
 	{/each}
 </div>

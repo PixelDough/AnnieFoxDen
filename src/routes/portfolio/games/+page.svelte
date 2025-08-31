@@ -42,30 +42,32 @@
 	}
 </style>
 
-<ContainerBubble>
-	<p>
-		This section is constantly being updated. Check back for more projects soon!
-	</p>
+<div class="basic-column basic-gap">
+	<div class="container-bubble">
+		<p>
+			This section is constantly being updated. Check back for more projects soon!
+		</p>
 
-	<h5>
-		Last updated: <br />
-		{lastUpdateStringGMT}
-		<br />
-		{lastUpdateString}
-	</h5>
-</ContainerBubble>
-
-<ContainerBubble>
-	<div class="grid">
-		{#each data.summaries as { slug, title, date }}
-			<HoverObject --display="block">
-				<a href="./{slug}" class="itemContainer">
-					<div class="item">
-						<PortfolioThumbnail slug={slug} />
-						<h3 class="title">{title}</h3>
-					</div>
-				</a>
-			</HoverObject>
-		{/each}
+		<h5>
+			Last updated: <br />
+			{lastUpdateStringGMT}
+			<br />
+			{lastUpdateString}
+		</h5>
 	</div>
-</ContainerBubble>
+
+	<div class="container-bubble">
+		<div class="grid">
+			{#each data.summaries as { slug, title, date }}
+				<HoverObject --display="block">
+					<a href="./{slug}" class="itemContainer">
+						<div class="item">
+							<PortfolioThumbnail slug={slug} />
+							<h3 class="title">{title}</h3>
+						</div>
+					</a>
+				</HoverObject>
+			{/each}
+		</div>
+	</div>
+</div>

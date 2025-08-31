@@ -41,8 +41,6 @@
 		
 		perspective: 10cm;
 		display: block;
-		width: 88px;
-		height: 31px;
 		
 		position: relative;
 		z-index: 0;
@@ -92,6 +90,7 @@
 	}
 </style>
 
+<!-- svelte-ignore a11y_no_static_element_interactions -->
 <div class="badge" bind:this={element} onmouseenter={onMouseOver} onmouseleave={onMouseOut} onmousemove={onMouseMove}>
 	<div class="badgeContent">
 		{#if children}

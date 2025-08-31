@@ -16,7 +16,7 @@
 </svelte:head>
 
 <SeoHeader site_name="Annie's Den" title={data.title} type="article" description={data.description} image={data.thumbnail} />
-<ContainerBubble>
+<div class="container-bubble">
 	<article>
 		<hgroup>
 			<h1>{data.title}</h1>
@@ -36,7 +36,7 @@
 			<data.content />
 		</div>
 	</article>
-</ContainerBubble>
+</div>
 
 <style>
 	article {
