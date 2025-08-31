@@ -30,7 +30,7 @@ function rmIncompTags(text: string): string {
 	// Gets the contents of the url of a markdown image line
 	const markdownImageUrlRegex = /(?<=\().*(?=\))/i;
 	// Gets the part of the filepath that comes after "assets" but before any file extensions
-	const imageAssetDirectoryRegex = /(?=assets\/).*(?=\.)/;
+	const imageAssetDirectoryRegex = /(?=assets\/).+?(?=\.)/;
 	// Get all lines that contain markdown images
 	const markdownImageRegex = /\(\$lib\/.+?\)/i;
 
