@@ -15,20 +15,20 @@ function rmIncompTags(text: string): string {
 	const componentCloseRegex = /<\/.*>/gi
 
 	// Gets the import lines
-	const importStringsRegex = /import.*(?<=\').*(?<=\')/gi;
+	const importStringsRegex = /import.*(?<=\').+?(?<=\')/gi;
 	// Gets the name of the import
-	const importNameRegex = /(?<=import ).*(?= from)/i;
+	const importNameRegex = /(?<=import ).+?(?= from)/i;
 	// Gets the path of the import
-	const importPathRegex = /(?<=\').*(?=\')/i;
+	const importPathRegex = /(?<=\').+?(?=\')/i;
 	// Gets the markdown image lines that are using a sveltekit import name as the url
 	// TODO: UPDATE DESC AND NAME
 	const markdownImageWithSvelteImportRegex = /\(\{.+?\}\)/gi;
 	// Gets the part of a string that is between curly brackets (including the brackets)
-	const betweenWithCurlyBracketsRegex = /(?=\{).*(?<=\})/i;
+	const betweenWithCurlyBracketsRegex = /(?=\{).+?(?<=\})/i;
 	// Gets the part of a string that is between curly brackets (excluding the brackets)
-	const betweenCurlyBracketsRegex = /(?<=\{).*(?=\})/i;
+	const betweenCurlyBracketsRegex = /(?<=\{).+?(?=\})/i;
 	// Gets the contents of the url of a markdown image line
-	const markdownImageUrlRegex = /(?<=\().*(?=\))/i;
+	const markdownImageUrlRegex = /(?<=\().+?(?=\))/i;
 	// Gets the part of the filepath that comes after "assets" but before any file extensions
 	const imageAssetDirectoryRegex = /(?=assets\/).+?(?=\.)/;
 	// Get all lines that contain markdown images
@@ -54,7 +54,10 @@ function rmIncompTags(text: string): string {
 	console.log(imageLines)
 	imageLines?.forEach(l => {
 		const keyCheck = l.match(betweenCurlyBracketsRegex)
-		if (!keyCheck) return;
+		if (!keyCheck) {
+			console.log(`Failed to find key between curly brackets in line: ${l}`)
+			return;
+		}
 		const key = keyCheck[0];
 		const value = imports[key];
 		if (!value) return;
@@ -77,7 +80,10 @@ function rmIncompTags(text: string): string {
 	Object.entries(imagesGlob).forEach(pathModulePair => {
 		const [path, module] = pathModulePair;
 		const keyCheck = module.match(imageAssetDirectoryRegex);
-		if (!keyCheck) return;
+		if (!keyCheck) {
+			console.log(`Failed to image asset directory in module: ${module}`)
+			return;
+		}
 		const key = keyCheck[0];
 		imagePaths[key] = path;
 		imageModules[key] = module;
@@ -87,7 +93,10 @@ function rmIncompTags(text: string): string {
 	const finalImageLines = text.match(markdownImageRegex);
 	finalImageLines?.forEach(l => {
 		const keyCheck = l.match(imageAssetDirectoryRegex);
-		if (!keyCheck) return;
+		if (!keyCheck) {
+			console.log(`Failed to find key image asset directory in line: ${l}`)
+			return;
+		}
 		const key = keyCheck![0];
 		const value = imagePaths[key]!;
 		console.log(`the value is ${l}`);
