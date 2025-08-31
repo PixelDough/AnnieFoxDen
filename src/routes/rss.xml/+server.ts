@@ -103,7 +103,7 @@ function rmIncompTags(text: string): string {
 		if (!value) return;
 
 		var imageUrl = dev ? `http://localhost:5173${value}` : `https://anniesden.dev${value}`
-		if (!value.startsWith("/app/")) {
+		if (!value.startsWith("/_app/")) {
 			imageUrl = value;
 		}
 		const fixedLine = l.replace(markdownImageUrlRegex, imageUrl);
