@@ -98,11 +98,11 @@ function rmIncompTags(text: string): string {
 			return;
 		}
 		const key = keyCheck![0];
-		const value = imageModules[key]!;
+		var value = imageModules[key]!;
 		console.log(`the value is ${l}`);
 		if (!value) return;
 		const imageUrl = dev ? `http://localhost:5173${value}` : `https://anniesden.dev${value}`
-		const fixedLine = l.replace(markdownImageUrlRegex, imageUrl);
+		const fixedLine = l.replace(markdownImageUrlRegex, value);
 		text = text.replace(l, fixedLine);
 	})
 
