@@ -53,7 +53,9 @@ function rmIncompTags(text: string): string {
 	const imageLines = text.match(markdownImageWithSvelteImportRegex);
 	console.log(imageLines)
 	imageLines?.forEach(l => {
-		const key = l.match(betweenCurlyBracketsRegex)![0];
+		const keyCheck = l.match(betweenCurlyBracketsRegex)
+		if (!keyCheck) return;
+		const key = keyCheck[0];
 		const value = imports[key];
 		if (!value) return;
 		const fixedLine = l.replace(betweenWithCurlyBracketsRegex, value);
@@ -74,7 +76,9 @@ function rmIncompTags(text: string): string {
 	const imageModules: { [key: string]: string } = {}
 	Object.entries(imagesGlob).forEach(pathModulePair => {
 		const [path, module] = pathModulePair;
-		const key = module.match(imageAssetDirectoryRegex)![0];
+		const keyCheck = module.match(imageAssetDirectoryRegex);
+		if (!keyCheck) return;
+		const key = keyCheck[0];
 		imagePaths[key] = path;
 		imageModules[key] = module;
 		console.log(key)
@@ -82,7 +86,9 @@ function rmIncompTags(text: string): string {
 	
 	const finalImageLines = text.match(markdownImageRegex);
 	finalImageLines?.forEach(l => {
-		const key = l.match(imageAssetDirectoryRegex)![0];
+		const keyCheck = l.match(imageAssetDirectoryRegex);
+		if (!keyCheck) return;
+		const key = keyCheck![0];
 		const value = imagePaths[key]!;
 		console.log(`the value is ${l}`);
 		if (!value) return;
