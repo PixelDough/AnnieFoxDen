@@ -22,7 +22,7 @@ function rmIncompTags(text: string): string {
 	const importPathRegex = /(?<=\').*(?=\')/i;
 	// Gets the markdown image lines that are using a sveltekit import name as the url
 	// TODO: UPDATE DESC AND NAME
-	const markdownImageWithSvelteImportRegex = /\(\{.*\}\)/gi;
+	const markdownImageWithSvelteImportRegex = /\(\{.+?\}\)/gi;
 	// Gets the part of a string that is between curly brackets (including the brackets)
 	const betweenWithCurlyBracketsRegex = /(?=\{).*(?<=\})/i;
 	// Gets the part of a string that is between curly brackets (excluding the brackets)
