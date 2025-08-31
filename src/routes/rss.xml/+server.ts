@@ -36,6 +36,8 @@ function rmIncompTags(text: string): string {
 
 	// \([^)]*\)
 
+	console.log(text);
+
 	// Get all the imports
 	const importStrings = text.match(importStringsRegex);
 	var imports: { [key: string]: string} = {}
