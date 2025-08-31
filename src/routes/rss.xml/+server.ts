@@ -101,8 +101,12 @@ function rmIncompTags(text: string): string {
 		var value = imageModules[key]!;
 		console.log(`the value is ${l}`);
 		if (!value) return;
-		const imageUrl = dev ? `http://localhost:5173${value}` : `https://anniesden.dev${value}`
-		const fixedLine = l.replace(markdownImageUrlRegex, value);
+
+		var imageUrl = dev ? `http://localhost:5173${value}` : `https://anniesden.dev${value}`
+		if (!value.startsWith("/app/")) {
+			imageUrl = value;
+		}
+		const fixedLine = l.replace(markdownImageUrlRegex, imageUrl);
 		text = text.replace(l, fixedLine);
 	})
 
