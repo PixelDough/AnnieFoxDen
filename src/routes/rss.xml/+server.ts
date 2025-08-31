@@ -87,7 +87,7 @@ function rmIncompTags(text: string): string {
 		const key = keyCheck[0];
 		imagePaths[key] = path;
 		imageModules[key] = module;
-		console.log(key)
+		console.log(`${key}: ${path}`)
 	});
 	
 	const finalImageLines = text.match(markdownImageRegex);
