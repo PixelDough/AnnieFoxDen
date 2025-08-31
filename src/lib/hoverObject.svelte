@@ -46,6 +46,9 @@
 		
 		width: 100%;
 		height: 100%;
+		
+		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
 	}
 	.badge img:hover {
 		filter: brightness(1.1);
@@ -62,6 +65,9 @@
         align-content: center;
         justify-content: center;
         object-fit: contain;
+
+		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
 	}
 	
 	.badgeContent:hover {

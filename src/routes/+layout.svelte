@@ -10,13 +10,22 @@
 	import '@fontsource-variable/raleway';
 	import AnnieTransparentMedium from '$lib/assets/AnnieTransparentMedium.png';
 	import Header from '$lib/header.svelte';
+	import IconRss from '$lib/assets/icons/rss.png';
 	
 	import { title } from "$lib/store.js";
 	import Music from '$lib/assets/SpaceMusic_60bpm.mp3';
 
 	import { Canvas } from '@threlte/core'
   	import Scene from '$lib/Scene.svelte'
+	import HoverObject from '$lib/hoverObject.svelte';
 </script>
+
+<style>
+	img {
+		height: 12px;
+		object-fit: contain;
+	}
+</style>
 
 <svelte:head>
 	<!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -54,6 +63,7 @@
 				<h6><a href="/contact">contact</a></h6>
 				<h6><a href="/todo">todo</a></h6>
 				<h6><a href="/changelog">changelog</a></h6>
+				<h6><a href="/rss.xml"><HoverObject hoverScale={0.5} isSpan={true}><img src={IconRss} alt="rss feed" /></HoverObject></a></h6>
 			</div>
 		</div>
 	</footer>
