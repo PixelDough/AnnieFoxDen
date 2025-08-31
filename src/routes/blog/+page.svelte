@@ -71,12 +71,17 @@
 		border-radius: 16px;
 		font-size: 0;
 	}
+
+	.blog-container {
+		display: block;
+		width: 100%;
+	}
 </style>
 
 <div class="grid">
 	{#each sortedArticles as article }
-		<HoverObject hoverScale={0.3}>
-			<a href="./{article.articleSlug}">
+		<HoverObject hoverScale={0.3} --display="block">
+			<a class="blog-container" href="./{article.articleSlug}">
 				<div class="item">
 					<img src={article.metadata.thumbnail} alt={article.articleSlug} class="thumbnail" />
 					<div class="title-box">

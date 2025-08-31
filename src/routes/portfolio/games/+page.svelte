@@ -44,7 +44,7 @@
 
 <div class="grid">
 	{#each data.summaries as { slug, title, date }}
-		<HoverObject>
+		<HoverObject --display="block">
 			<a href="./{slug}">
 				<div class="item">
 					<PortfolioThumbnail slug={slug} />

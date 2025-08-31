@@ -4,6 +4,9 @@
 </script>
 
 <style>
+	p {
+		display: block;
+	}
 	img {
 		object-fit: contain;
 		flex: 1 256px;
@@ -11,10 +14,8 @@
 	}
 </style>
 
-<div style:max-width="49%">
-	<HoverObject>
-		<a href={link ?? src} target="_blank">
-			<img src={src} alt={alt} style="height: {height}" />
-		</a>
-	</HoverObject>
-</div>
+<HoverObject isSpan={true}>
+	<!-- <a href={link ?? src} target="_blank"> -->
+		<img src={src} alt={alt} style="height: {height}" />
+	<!-- </a> -->
+</HoverObject>

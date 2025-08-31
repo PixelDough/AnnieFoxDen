@@ -33,14 +33,26 @@ i tend to enjoy one-on-one conversations, sharing what i'm working on with frien
 
 so today i had the idea of starting a blog on my personal website! that way i can type all i want in a post, include images wherever in the post i want, and style it all to my liking! this way i can also share the blog posts i make in direct messages, as well as more public spaces like chatrooms and social media.
 
-<BlogImages images={images} height="200px"/>
+<BlogItemCollection>
+  
+
+  [![rickroll](https://media1.tenor.com/m/x8v1oNUOmg4AAAAd/rickroll-roll.gif)](https://youtu.be/dQw4w9WgXcQ?si=oUdZB-ObhERXY8zl)
+  
+  [![cat laughing](https://media1.tenor.com/m/ryp18LniYBsAAAAd/cat-laugh.gif)](https://youtu.be/dQw4w9WgXcQ?si=oUdZB-ObhERXY8zl)
+
+
+</BlogItemCollection>
 
 take a look at that image embed!
 
 anyways, that's all for this blog post. hopefully gonna share what i've been working on here soon!
 
 <BlogItemCollection>
-  <BlogImage src={AnnieTransparentMedium} alt={"Annie's Den Logo"} />
+
+
+  [![Annie's Den Logo]({AnnieTransparentMedium})](https://anniesden.dev/)
+
+
 </BlogItemCollection>
 
 P.S. big thanks to [JB](https://jbcarreon123.nekoweb.org/) for helping me solve some issues i had setting up this blog! go check out their page!

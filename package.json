@@ -49,6 +49,7 @@
 		"@types/three": "^0.175.0",
 		"feed": "^5.1.0",
 		"markdown-it": "^14.1.0",
+		"mdsvex-relative-images": "^2.0.0",
 		"node-fs": "^0.1.7",
 		"shiki": "^3.8.1",
 		"svelte-fast-marquee": "^0.8.0",

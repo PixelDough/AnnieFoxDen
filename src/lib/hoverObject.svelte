@@ -1,5 +1,5 @@
 <script>
-	const { children, hoverScale = 1 } = $props();
+	const { children, hoverScale = 1, isSpan = false } = $props();
 	
 	let element;
 	var hovered = $state(false);
@@ -28,6 +28,7 @@
 		if (element.children[0]) {
 			element.children[0].style.transform = transform;
 			element.children[0].style.filter = `brightness(${brightness}) drop-shadow(${-xoff * 4.0}px ${-yoff * 4.0}px 0px black)`;
+			element.children[0].style.zindex = 2000;
 		}
 	}
 </script>
@@ -37,10 +38,10 @@
 		
 	}
 	.badge {
-		perspective: 20cm;
-		display: block;
-		
+		/* background-color: black; */
 		position: relative;
+		perspective: 20cm;
+		display: var(--display, flex);
 		z-index: 0;
 		
 		width: 100%;
@@ -48,6 +49,7 @@
 	}
 	.badge img:hover {
 		filter: brightness(1.1);
+		z-index: 2000;
 	}
 	
 	.badgeContent {
@@ -68,7 +70,6 @@
 	
 	.badgeContent::after {
 		content: "";
-		position: absolute;
 		left: 0;
 		right: 0;
 		background-color: white;
@@ -92,6 +93,17 @@
 	}
 </style>
 
+{#if isSpan}
+<!-- svelte-ignore a11y_no_static_element_interactions -->
+<span class="badge" bind:this={element} onmouseenter={onMouseOver} onmouseleave={onMouseOut} onmousemove={onMouseMove}>
+	<span class="badgeContent">
+		{#if children}
+			{@render children()}
+		{/if}
+	</span>
+</span>
+{:else}
+<!-- svelte-ignore a11y_no_static_element_interactions -->
 <div class="badge" bind:this={element} onmouseenter={onMouseOver} onmouseleave={onMouseOut} onmousemove={onMouseMove}>
 	<div class="badgeContent">
 		{#if children}
@@ -99,3 +111,4 @@
 		{/if}
 	</div>
 </div>
+{/if}

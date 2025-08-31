@@ -2,7 +2,14 @@ import adapter from '@sveltejs/adapter-static';
 // import adapter from 'svelte-adapter-nekoweb';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 import { mdsvex } from 'mdsvex';
+import relativeImages from 'mdsvex-relative-images';
 import { createHighlighter } from 'shiki';
+import { join } from 'path';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 // import { NEKOWEB_API_KEY, NEKOWEB_COOKIE } from '$env/static/private';
 
@@ -16,7 +23,14 @@ const highlighter = await createHighlighter({
 const config = {
 	// Consult https://svelte.dev/docs/kit/integrations
 	// for more information about preprocessors
-	preprocess: [vitePreprocess(), mdsvex({ extensions: ['.svx', '.md'] })],
+	preprocess: [
+		vitePreprocess(),
+		mdsvex({
+			extensions: ['.svx', '.md'],
+			remarkPlugins: [relativeImages],
+			layout: join(__dirname, './src/lib/mdsvex_layout/layout.svelte')
+		})
+	],
 	extensions: ['.svelte', '.svx', '.md'],
 
 	kit: {
