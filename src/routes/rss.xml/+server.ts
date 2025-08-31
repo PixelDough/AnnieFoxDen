@@ -45,17 +45,17 @@ function rmIncompTags(text: string): string {
 		if (!key || !value) return;
 		imports[key[0]] = value[0];
 	});
-	// console.log(imports);
+	console.log(imports);
 
 	// Convert any lines that use import keys to use the approproate import values
 	const imageLines = text.match(markdownImageWithSvelteImportRegex);
-	// console.log(imageLines)
+	console.log(imageLines)
 	imageLines?.forEach(l => {
 		const key = l.match(betweenCurlyBracketsRegex)![0];
 		const value = imports[key];
 		if (!value) return;
 		const fixedLine = l.replace(betweenWithCurlyBracketsRegex, value);
-		// console.log(fixedLine)
+		console.log(fixedLine)
 		text = text.replace(l, fixedLine);
 	})
 
@@ -75,21 +75,21 @@ function rmIncompTags(text: string): string {
 		const key = module.match(imageAssetDirectoryRegex)![0];
 		imagePaths[key] = path;
 		imageModules[key] = module;
-		// console.log(key)
+		console.log(key)
 	});
 	
 	const finalImageLines = text.match(markdownImageRegex);
 	finalImageLines?.forEach(l => {
 		const key = l.match(imageAssetDirectoryRegex)![0];
 		const value = imagePaths[key]!;
-		// console.log(`the value is ${l}`);
+		console.log(`the value is ${l}`);
 		if (!value) return;
 		const imageUrl = dev ? `http://localhost:5173${value}` : `https://anniesden.dev${value}`
 		const fixedLine = l.replace(markdownImageUrlRegex, imageUrl);
 		text = text.replace(l, fixedLine);
 	})
 
-	// console.log(text)
+	console.log(text)
 
     return text
 			.replace(blogImageRegex, '')
