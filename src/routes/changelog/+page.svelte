@@ -5,6 +5,16 @@
 
 <h6>Note: Format is yy-mm-dd</h6>
 
+<h3>25-08-30</h3>
+<ul>
+	<li>Created my RSS feed for my blog! (https://anniesden.dev/rss.xml)</li>
+</ul>
+
+<h3>25-07-25</h3>
+<ul>
+	<li>Started my blog!</li>
+</ul>
+
 <h3>25-04-15</h3>
 <ul>
 	<li>Updated About Me</li>
