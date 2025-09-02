@@ -37,7 +37,7 @@
 	<title>{$title}</title>
 </svelte:head>
 
-<audio src={"http://radio.modules.pl:8500/;?type=http"} autoplay preload="metadata" volume={0.5}></audio>
+<audio src={"http://radio.modules.pl:8500/;?type=http&nocache=29691"} autoplay preload="metadata" volume={0.5}></audio>
 <div style="position: fixed; width: 100%; height: 100%; z-index: -1; left: 0; top: 0;">
 	<div style="width: 100%; height: 100%;">
 		<Canvas colorManagementEnabled={true} colorSpace={"srgb"}>
