@@ -17,13 +17,6 @@
 
 </script>
 <style>
-	/* div {
-		gap: 8px;
-	} */
-	p {
-		margin-top: 0;
-		margin-bottom: 0;
-	}
 
 	.home-column {
 		display: flex;
@@ -40,29 +33,22 @@
 		flex-wrap: wrap;
 	}
 
-	.nogrow {
-		flex-basis: 0;
-		flex-grow: 1;
-	}
-
 	.minwidth {
-		min-width: 20ch;
+		min-width: 30ch;
 	}
 
-	/* @media only screen and (max-width: 600px) {
-		.half-width {
-			max-width: 100%;
-		}
+	.center-contents {
+		align-items: center;
+		align-content: center;
+		justify-content: center;
+	}
+
+	@media only screen and (max-width: 500px) {
 		.hbox {
-			flex-direction: column;
-		}
-		.home-friend-button-list {
-			flex-direction: row;
+			/* flex-direction: column; */
 			flex-wrap: wrap;
-			align-content: center;
-			align-items: center;
 		}
-	} */
+	}
 
 	:global(.marquee-container) {
 		overflow: visible;
@@ -78,21 +64,59 @@
 
 <div class="home-column basic-gap">
 	<div class="hbox basic-gap">
-		<div class="hbox wrap basic-gap">
+		<div class="home-column basic-gap">
+			<!-- welcome -->
 			<div class="container-bubble minwidth">
 				<h2 class="text-welcome">Welcome to my webpage!</h2>
-				<p>Check out the links in the header to learn more about me, check out my blog, or learn more about my various projects!</p>
+				<p>Check out the links in the header to read my blog, or learn more about my various projects!</p>
 			</div>
-			<div class="container-bubble minwidth">
-				<p>Using Nekoweb? Follow me with the button below!</p>
+			<div class="hbox wrap basic-gap">
+				<!-- about -->
+				<div class="container-bubble minwidth">
+					<h2>About Me</h2>
+					<p>Hi! I'm Annalise, but you can just call me Annie though!</p>
+					<p>I'm a trans, furry game dev and programmer, and I've been designing games since 2015!</p>
+					<p>My most popular project was "<a href="https://pixeldough.itch.io/start-survey">Start Survey?</a>" (maybe you've played it?), but my most recent project is <a href="/portfolio/games/deep-space-bellhop/">Deep Space Bellhop</a>! (^_-)-☆</p>
+
+					<p>Here's a couple links to teams I am a part of!</p>
+					<ul>
+						<li><a href="https://umeyu.me">UmeYume</a></li>
+						<li><a href="https://parallas.dev">parallas</a></li>
+					</ul>
+				</div>
+				<div class="container-bubble minwidth">
+				<h2>Tools</h2>
+				<h3>Game Dev</h3>
+				<ul>
+					<li>MonoGame</li>
+					<li>Unity 3D</li>
+					<li>Godot (Mono)</li>
+					<li>Jetbrains Rider</li>
+				</ul>
+				<h3>Music</h3>
+				<ul>
+					<li>Logic Pro</li>
+					<li>Audacity</li>
+				</ul>
+				<h3>3D Art</h3>
+				<ul>
+					<li>Blender</li>
+					<li>Substance Painter</li>
+				</ul>
+			</div>
+			</div>
+		</div>
+		<div class="basic-side-bar basic-gap">
+			<FriendButtonList />
+			<div class="container-bubble">
+				<p>Follow me on Nekoweb!</p>
 				<iframe src="https://nekoweb.org/frame/follow" title="Follow me on Nekoweb!" frameborder="0" width="170" height="28"></iframe>
 			</div>
 		</div>
-		<FriendButtonList />
 	</div>
 	<center>check out these cool sites!</center>
 	<div class="container-bubble">
-		<Marquee pauseOnHover={true} speed={50} play={true} gap="8px" style="margin: -20px; padding: 20px; overflow-x: clip; mask-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 0) 100%);">
+		<Marquee pauseOnHover={true} speed={50} play={true} gap="8px" style="margin-top:-20px; margin-bottom:-20px; padding-top:20px; padding-bottom:20px; overflow-x: clip; mask-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 0) 100%);">
 			{#each Object.entries(coolSitesButtons) as [_path, module]}
 				<ImageButton path={_path} imagePath={module} />
 			{/each}
