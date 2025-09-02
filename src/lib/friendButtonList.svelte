@@ -23,18 +23,11 @@
 		/* width: fit-content; */
 		max-width: 100%;
 		display: flex;
-		flex-direction: column;
-		flex-wrap: nowrap;
+		flex-direction: row;
+		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
 		gap: 8px;
-	}
-
-	@media only screen and (max-width: 500px) {
-		.home-friend-button-list {
-			flex-direction: row;
-			flex-wrap: wrap;
-		}
 	}
 </style>
 

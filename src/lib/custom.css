@@ -180,6 +180,13 @@ s {
 	display: flex;
 	flex-direction: column;
 	min-width: 15ch;
+	max-width: 15ch;
 	flex-grow: 1000;
 	height: fit-content;
+}
+
+@media only screen and (max-width: 500px) {
+	.basic-side-bar {
+		max-width: 100%;
+	}
 }
