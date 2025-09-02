@@ -37,7 +37,7 @@
 	<title>{$title}</title>
 </svelte:head>
 
-<audio src={"http://radio.modules.pl:8500/;?type=http&nocache=29691"} autoplay preload="metadata" volume={0.5}></audio>
+<audio src={Music} autoplay volume={0.2} loop></audio>
 <div style="position: fixed; width: 100%; height: 100%; z-index: -1; left: 0; top: 0;">
 	<div style="width: 100%; height: 100%;">
 		<Canvas colorManagementEnabled={true} colorSpace={"srgb"}>
@@ -58,9 +58,6 @@
 		<div style="display: flex; flex-direction: row; justify-content: space-between;">
 			<div>
 				<h6>Page built using SvelteKit</h6>
-			</div>
-			<div>
-				<a href="http://radio.modules.pl:8500/currentsong?sid=1"><h6>current music from radio.modules.pl</h6></a>
 			</div>
 			<div style:display="flex" style:flex-direction="row" style:gap="8px" style:flex-wrap="wrap">
 				<h6><a href="/contact">contact</a></h6>
