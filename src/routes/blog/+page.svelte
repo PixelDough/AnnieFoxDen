@@ -17,11 +17,8 @@
 	);
 	console.log(sortedArticles);
 
-	import PortfolioThumbnail from '$lib/portfolioThumbnail.svelte';
-	import HoverObject from '$lib/hoverObject.svelte';
 	import SeoHeader from '$lib/seoHeader.svelte';
 	import TagChip from '$lib/tagChip.svelte';
-	import ContainerBubble from '$lib/containerBubble.svelte';
 </script>
 
 <SeoHeader title="Blog" />

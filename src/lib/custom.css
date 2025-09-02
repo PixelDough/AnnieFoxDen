@@ -18,6 +18,11 @@ h2 {
 	font-weight: 800;
 }
 
+h3 {
+	margin: 0;
+	margin-bottom: 1ch;
+}
+
 h6 {
 	/* margin: 0; */
 	margin-top: 0.25ch;
@@ -152,7 +157,7 @@ s {
 	/* height: fit-content; */
 
 	p {
-		margin-top: 0.25ch;
+		/* margin-top: 0.25ch; */
 		/* margin-bottom: 1ch; */
 	}
 }
@@ -171,4 +176,5 @@ s {
 	flex-direction: column;
 	min-width: 15ch;
 	flex-grow: 1000;
+	height: fit-content;
 }

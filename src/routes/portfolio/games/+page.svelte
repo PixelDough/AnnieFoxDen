@@ -11,6 +11,7 @@
 	import PortfolioThumbnail from '$lib/portfolioThumbnail.svelte';
 	import HoverObject from '$lib/hoverObject.svelte';
 	import ContainerBubble from '$lib/containerBubble.svelte';
+	import PortfolioButton from '$lib/portfolioButton.svelte';
 </script>
 
 <style>
@@ -59,14 +60,7 @@
 	<div class="container-bubble">
 		<div class="grid">
 			{#each data.summaries as { slug, title, date }}
-				<HoverObject --display="block">
-					<a href="./{slug}" class="itemContainer">
-						<div class="item">
-							<PortfolioThumbnail slug={slug} />
-							<h3 class="title">{title}</h3>
-						</div>
-					</a>
-				</HoverObject>
+				<PortfolioButton slug={slug} title={title} />
 			{/each}
 		</div>
 	</div>

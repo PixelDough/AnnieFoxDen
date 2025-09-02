@@ -11,10 +11,6 @@
 	);
 </script>
 <style>
-	h2 {
-		margin: 0;
-		margin-bottom: 1ch;
-	}
 	.home-friend-button-panel {
 		/* width: fit-content; */
 		height: fit-content;
@@ -43,7 +39,7 @@
 
 <div class="home-friend-button-panel">
 	<div class="container-bubble">
-		<h2>Friends</h2>
+		<h3>Friends</h3>
 		<div class="home-friend-button-list">
 			{#each Object.entries(friendsButtons) as [_path, module]}
 				<ImageButton path={_path} imagePath={module} />

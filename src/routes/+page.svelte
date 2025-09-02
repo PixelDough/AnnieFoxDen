@@ -1,11 +1,17 @@
 <script>
 	import FriendButtonList from "$lib/friendButtonList.svelte";
+	import HoverObject from "$lib/hoverObject.svelte";
 	import ImageButton from "$lib/imageButton.svelte";
+	import PortfolioButton from "$lib/portfolioButton.svelte";
+	import PortfolioThumbnail from "$lib/portfolioThumbnail.svelte";
 	import SeoHeader from "$lib/seoHeader.svelte";
 	import { title } from "$lib/store.js";
 	import UrlButton from "$lib/urlButton.svelte";
 	import Marquee from "svelte-fast-marquee";
 	title.set("Annie's Den")
+
+	const recentGameSlug = "deep-space-bellhop"
+	const recentGameTitle = "Deep Space Bellhop"
 
 	const coolSitesButtons = import.meta.glob(
 		'$lib/assets/buttons/cool/*.{gif,png,jpg,jpeg,PNG,JPEG}',
@@ -41,6 +47,8 @@
 		align-items: center;
 		align-content: center;
 		justify-content: center;
+		justify-items: center;
+		text-align: center;
 	}
 
 	@media only screen and (max-width: 500px) {
@@ -84,32 +92,41 @@
 						<li><a href="https://parallas.dev">parallas</a></li>
 					</ul>
 				</div>
+				<!-- tools -->
 				<div class="container-bubble minwidth">
-				<h2>Tools</h2>
-				<h3>Game Dev</h3>
-				<ul>
-					<li>MonoGame</li>
-					<li>Unity 3D</li>
-					<li>Godot (Mono)</li>
-					<li>Jetbrains Rider</li>
-				</ul>
-				<h3>Music</h3>
-				<ul>
-					<li>Logic Pro</li>
-					<li>Audacity</li>
-				</ul>
-				<h3>3D Art</h3>
-				<ul>
-					<li>Blender</li>
-					<li>Substance Painter</li>
-				</ul>
+					<h2>Tools</h2>
+					<h3>Game Dev</h3>
+					<ul>
+						<li>MonoGame</li>
+						<li>Unity 3D</li>
+						<li>Godot (Mono)</li>
+						<li>Jetbrains Rider</li>
+					</ul>
+					<h3>Music</h3>
+					<ul>
+						<li>Logic Pro</li>
+						<li>Audacity</li>
+					</ul>
+					<h3>3D Art</h3>
+					<ul>
+						<li>Blender</li>
+						<li>Substance Painter</li>
+					</ul>
+				</div>
 			</div>
+			<div class="container-bubble center-contents hbox">
+				<div style:width="fit-content">
+					<h3>My most recent game!</h3>
+					<div style:max-width="300px">
+						<PortfolioButton slug={recentGameSlug} title={""} />
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="basic-side-bar basic-gap">
 			<FriendButtonList />
-			<div class="container-bubble">
-				<p>Follow me on Nekoweb!</p>
+			<div class="container-bubble center-contents">
+				<h3>Follow me on Nekoweb!</h3>
 				<iframe src="https://nekoweb.org/frame/follow" title="Follow me on Nekoweb!" frameborder="0" width="170" height="28"></iframe>
 			</div>
 		</div>
