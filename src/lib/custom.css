@@ -37,6 +37,11 @@ hr {
 	border-color: #af91f4;
 }
 
+center {
+	color: rgb(220, 188, 255);
+	margin-bottom: 1ch;
+}
+
 
 body {
 	display: flex;
