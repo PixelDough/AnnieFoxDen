@@ -21,7 +21,7 @@
 	}
 </style>
 
-<a href={slug} class="itemContainer">
+<a href="/portfolio/games/{slug}" class="itemContainer">
 	<HoverObject --display="block">
 		<div class="item">
 			<PortfolioThumbnail slug={slug} />

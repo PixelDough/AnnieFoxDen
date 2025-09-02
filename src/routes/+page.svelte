@@ -10,7 +10,7 @@
 	import Marquee from "svelte-fast-marquee";
 	title.set("Annie's Den")
 
-	const recentGameSlug = "/portfolio/games/deep-space-bellhop"
+	const recentGameSlug = "deep-space-bellhop"
 
 	const coolSitesButtons = import.meta.glob(
 		'$lib/assets/buttons/cool/*.{gif,png,jpg,jpeg,PNG,JPEG}',
