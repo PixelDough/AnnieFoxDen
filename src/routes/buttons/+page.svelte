@@ -8,21 +8,6 @@
 	import UrlButton from '$lib/urlButton.svelte';
 	import SeoHeader from "$lib/seoHeader.svelte";
 	
-	
-	const friendsButtons = import.meta.glob(
-		'$lib/assets/buttons/friends/*.{gif,png,jpg,jpeg,PNG,JPEG}',
-		{
-			eager: true,
-			as: 'url',
-		}
-	);
-	const coolSitesButtons = import.meta.glob(
-		'$lib/assets/buttons/cool/*.{gif,png,jpg,jpeg,PNG,JPEG}',
-		{
-			eager: true,
-			as: 'url',
-		}
-	);
 	const funButtons = import.meta.glob(
 		'$lib/assets/buttons/fun/*.{gif,png,jpg,jpeg,PNG,JPEG}',
 		{
@@ -63,45 +48,10 @@
 <div class="basic-column basic-gap">
 	<div class="container-bubble">
 		<div>
-			<h2>My buttons!</h2>
-			<p>Click to copy the html to your clipboard!</p>
-			<div class="buttonList">
-				<img src={AnnieButton} alt="test" style="display: none;" />
-				<CopyOnClick stringToCopy={anniesButtonHtml}>
-					<UrlButton html={anniesButtonHtml} onclick={() => {}} />
-				</CopyOnClick>
-			</div>
-		</div>
-	</div>
-
-	<div class="container-bubble">
-		<div>
-			<h2>Friends sites!</h2>
-			<!-- <p>Click on these buttons to go to their page!</p> -->
-			
-			<div class="buttonList">
-				{#each Object.entries(friendsButtons) as [_path, module]}
-					<ImageButton path={_path} imagePath={module} />
-				{/each}
-				<UrlButton html='<a title="bellets :-DD" href="https://bellets.me"><img width="88px" height="31px" src="https://bellets.me/assets/bellets.gif"/></a>' />
-				<UrlButton html='<a href="https://racc.at/"><img src="https://racc.at/media/uploads/88x31.png" alt="Ketts site!"/></a>' />
-				<UrlButton html='<a href="https://axoga.to/"><img src="https://axoga.to/images/stamps/chai.png" alt="Chais site!"/></a>' />
-				<UrlButton html='<a href="https://compactbunker.org"><img src="https://compactbunker.org/blinkies/personal.gif"></a>' />
-				<UrlButton html='<a href="https://puddingpudd.com"><img src="https://puddingpudd.com/buttons/Pudd_Button.gif" width="88" height="31"></a>' />
-				<UrlButton html='<a href="https://mimiya.nekoweb.org"><img src="https://mimiya.nekoweb.org/button.png" width="88" height="31"></a>' />
-			</div>
-		</div>
-	</div>
-
-	<div class="container-bubble">
-		<div>
 			<h2>Cool sites!</h2>
 			<!-- <p>Click on these buttons to go to their page!</p> -->
 			
 			<div class="buttonList">
-				{#each Object.entries(coolSitesButtons) as [_path, module]}
-					<ImageButton path={_path} imagePath={module} />
-				{/each}
 				<UrlButton html='<a title="melonking" href="https://melonking.net"><img width="88px" height="31px" src="https://melonking.net/images/badges/MELON-BADGE-2.GIF"/></a>' />
 				<UrlButton html='<a title="melonland" href="https://melonland.net"><img width="88px" height="31px" src="https://melonland.net/images/melonland-badge-2.gif"/></a>' />
 				<UrlButton html='<a href="https://hyphin.net"><img src="https://hyphin.net/Assets/Images/HyphButtonLow.gif" alt="hyphin dot net" width="88" height="31"></a>' />
