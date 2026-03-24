@@ -6,27 +6,42 @@
 	font-weight: 400;
 }
 
+p {
+	/* margin-top: 0; */
+	/* line-height: 1.2; */
+}
+
 h1 {
 	font-weight: 900;
 }
 
 h2 {
 	/* margin: 0; */
-	margin-top: 0.25ch;
-	margin-bottom: 1ch;
+	margin-top: 0;
+	margin-bottom: 1;
 	padding: 0;
 	font-weight: 800;
+	line-height: 1;
+	/* color: #bda1ff; */
+	color: #ffcdac;
 }
 
 h3 {
-	margin: 0;
-	margin-bottom: 1ch;
+	/* margin: 0; */
+	margin-top: 0;
+	line-height: 1;
+	margin-bottom: 8px;
+}
+
+h4 {
+	margin-top: 0;
+	margin-bottom: 8px;
 }
 
 h6 {
 	/* margin: 0; */
-	margin-top: 0.25ch;
-	margin-bottom: 0.25ch;
+	margin-top: 8px;
+	margin-bottom: 8px;
 	padding: 0;
 }
 
@@ -39,25 +54,25 @@ hr {
 
 center {
 	color: rgb(220, 188, 255);
-	margin-bottom: 1ch;
+	margin-bottom: 1;
 }
 
 
 body {
-	display: flex;
 	/* background-color: #6400d5; */
 	background-color: #6740be;
 	color: white;
 	justify-content: center;
 	align-items: center;
 
+	min-height: 100vh;
 	width: 100%;
 	max-width: 1000px;
 	margin: 0px auto 0px auto;
 
 	font-display: swap;
 	font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-	letter-spacing: 0.05ch;
+	/* letter-spacing: 0.05ch; */
 	font-weight: 600;
 	font-style: normal;
 }
@@ -65,6 +80,13 @@ body {
 .column {
 	padding: 0px 16px 0px 16px;
 	min-height: 100vh;
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+
+.sub-column {
 	width: 100%;
 	position: relative;
 	display: flex;
@@ -95,7 +117,7 @@ main {
 footer {
 	position: sticky;
 	bottom: 0;
-	margin-top: auto;
+	/* margin-top: auto; */
 	padding-bottom: 8px;
 	width: 100%;
 	float: bottom;
@@ -144,27 +166,20 @@ s {
 }
 
 .container-bubble {
-	padding: 20px;
-	margin: 0px;
+	padding: 16px;
+	/* margin: 4px; */
 	gap: 12px;
 	background: #7a45eb55;
 	box-shadow:
-		inset 6px 6px 8px rgb(172, 113, 255, 0.5),
-		inset -4px -4px 3px rgb(79, 40, 197, 0.5),
-		inset 0px -10px 30px rgb(58, 40, 197, 0.8);
-	backdrop-filter: blur(10px);
+		inset 2px 2px 1px rgb(172, 113, 255, 0.7),
+		inset -2px -2px 1px rgb(172, 113, 255, 0.7),
+		inset -4px -4px 40px rgb(172, 113, 255, 0.1);
+	backdrop-filter: blur(20px);
 	background-clip: padding-box;
-	border-radius: 24px;
+	border-radius: 8px;
 
 	flex-basis: 0;
 	flex-grow: 1;
-
-	/* height: fit-content; */
-
-	p {
-		/* margin-top: 0.25ch; */
-		/* margin-bottom: 1ch; */
-	}
 }
 
 .basic-column {
@@ -174,6 +189,7 @@ s {
 
 .basic-gap {
 	gap: 8px;
+	/* padding: 8px; */
 }
 
 .basic-side-bar {

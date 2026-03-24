@@ -25,7 +25,7 @@
 
 <style>
 	.item {
-		height: 140px;
+		/* height: 140px; */
 	}
 	.container {
 		position: relative;
@@ -90,7 +90,7 @@
 	}
 </style>
 
-<div class="grid basic-gap">
+<div class="sub-column basic-gap">
 	{#each sortedArticles as article }
 		<div class="item">
 			<!-- <img src={article.metadata.thumbnail} alt={article.articleSlug} class="thumbnail" /> -->

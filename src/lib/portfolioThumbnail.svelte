@@ -15,7 +15,7 @@
         height: 140px;
         object-fit: cover;
         overflow: hidden;
-        border-radius: 16px;
+        border-radius: 8px;
     }
 </style>
 

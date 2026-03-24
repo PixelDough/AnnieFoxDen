@@ -70,19 +70,6 @@
 		</div>
 	</div>
 
-	<div class="container-bubble">
-		<div>
-			<h2>Decorative!</h2>
-			<!-- <p>This is my button collection! No links here!</p> -->
-			
-			<div class="buttonList">
-				{#each Object.entries(funButtons) as [_path, module]}
-					<ImageButton imagePath={module} />
-				{/each}
-			</div>
-		</div>
-	</div>
-
 	<div style:margin-top="32px" style:text-align="center">
 		<h6><a href="https://gist.github.com/KettLovahr/a459e8e9824880f9e038cd424d9c80c1">Button styles</a> made with the help of <a href="https://racc.at/">Kett</a>!</h6>
 	</div>

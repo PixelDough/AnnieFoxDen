@@ -26,7 +26,7 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 		grid-template-rows: auto;
-		grid-gap: 16px;
+		grid-gap: 8px;
 	}
 	.title {
 		position: absolute;

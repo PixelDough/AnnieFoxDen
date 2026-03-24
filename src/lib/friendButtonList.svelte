@@ -42,7 +42,9 @@
 	</div>
 	<div class="container-bubble">
 		<h3>My button</h3>
-		<center>click to copy the html to your clipboard!</center>
+		<center>
+			<h4>click to copy the html to your clipboard!</h4>
+		</center>
 		<div class="home-friend-button-list">
 			<CopyOnClick stringToCopy={annieButtonHtmlString}>
 				<UrlButton html={annieButtonHtmlString} onclick={() => {}} />

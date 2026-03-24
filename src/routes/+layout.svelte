@@ -18,12 +18,32 @@
 	import { Canvas } from '@threlte/core'
   	import Scene from '$lib/Scene.svelte'
 	import HoverObject from '$lib/hoverObject.svelte';
+
+	import ImageButton from "$lib/imageButton.svelte";
+	const funButtons = import.meta.glob(
+		'$lib/assets/buttons/fun/*.{gif,png,jpg,jpeg,PNG,JPEG}',
+		{
+			eager: true,
+			as: 'url',
+		}
+	);
 </script>
 
 <style>
 	img {
 		height: 12px;
 		object-fit: contain;
+	}
+	div.buttonList {
+		margin-top: auto;
+		/* margin-top: 8px; */
+		padding-top: 8px;
+		margin-bottom: 0;
+		display: flex;
+		gap: 0px;
+		flex-wrap: wrap;
+		justify-content: center;
+		flex-direction: row;
 	}
 </style>
 
@@ -52,6 +72,12 @@
 	<main>
 		{@render children()}
 	</main>
+
+	<div class="buttonList">
+		{#each Object.entries(funButtons) as [_path, module]}
+			<ImageButton imagePath={module} />
+		{/each}
+	</div>
 	
 	<footer>
 		<hr />
